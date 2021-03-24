@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>number</display_field>
+        <field_list/>
+        <filter table="x_stave_sc_work_order">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">7b5ffcf51bbdac901784fd9c0a4bcbc6</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Form Simple List">5bc8ba84db57b70094ea6693ca96199d</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>carlos.ventura</sys_created_by>
+        <sys_created_on>2021-01-19 18:16:53</sys_created_on>
+        <sys_id>fb5ffcf51bbdac901784fd9c0a4bcbca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Active Work Orders</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_fb5ffcf51bbdac901784fd9c0a4bcbca</sys_update_name>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 18:19:07</sys_updated_on>
+        <table>x_stave_sc_work_order</table>
+        <title>Active Work Orders</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"always_show": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"panel_body_height": {
+		"value": "",
+		"displayValue": ""
+	},
+	"image_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "short_description,state,type",
+		"displayValue": "short_description,state,type"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "0be14209db433340f99a41deaa96196a",
+		"displayValue": "stv_sc_work_order_list"
+	},
+	"hide_footer": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"reference_field": {
+		"value": "asset",
+		"displayValue": "asset"
+	},
+	"reference_value": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=fb5ffcf51bbdac901784fd9c0a4bcbca"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>60ffef56db558cd0f492c597059619d5</instance_id>
+        <instance_name>staveincdemo8</instance_name>
+        <name>sp_instance_vlist_fb5ffcf51bbdac901784fd9c0a4bcbca</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_vlist"&gt;&lt;sp_instance_vlist action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field&gt;number&lt;/display_field&gt;&lt;field_list/&gt;&lt;filter table="x_stave_sc_work_order"&gt;active=true&lt;item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/&gt;&lt;/filter&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;maximum_entries&gt;5&lt;/maximum_entries&gt;&lt;order&gt;1&lt;/order&gt;&lt;order_by/&gt;&lt;order_direction&gt;asc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;7b5ffcf51bbdac901784fd9c0a4bcbc6&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="Form Simple List"&gt;5bc8ba84db57b70094ea6693ca96199d&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_vlist&lt;/sys_class_name&gt;&lt;sys_created_by&gt;carlos.ventura&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-19 18:16:53&lt;/sys_created_on&gt;&lt;sys_id&gt;fb5ffcf51bbdac901784fd9c0a4bcbca&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Active Work Orders&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_vlist_fb5ffcf51bbdac901784fd9c0a4bcbca&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;carlos.ventura&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-19 18:19:07&lt;/sys_updated_on&gt;&lt;table&gt;x_stave_sc_work_order&lt;/table&gt;&lt;title&gt;Active Work Orders&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"always_show": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"panel_body_height": {
+		"value": "",
+		"displayValue": ""
+	},
+	"image_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "short_description,state,type",
+		"displayValue": "short_description,state,type"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "0be14209db433340f99a41deaa96196a",
+		"displayValue": "stv_sc_work_order_list"
+	},
+	"hide_footer": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"reference_field": {
+		"value": "asset",
+		"displayValue": "asset"
+	},
+	"reference_value": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_vlist&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=fb5ffcf51bbdac901784fd9c0a4bcbca"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2107578371</payload_hash>
+        <record_name>Active Work Orders</record_name>
+        <reverted_from/>
+        <source>845dcd211b3d2c900a2863142a4bcbc6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>carlos.ventura</sys_created_by>
+        <sys_created_on>2021-01-19 18:19:07</sys_created_on>
+        <sys_id>78efb8391bbdac901784fd9c0a4bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1771bdf30cc0000001</sys_recorded_at>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 18:19:07</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>b0efb8394abdac9081713ab81ec857b5</update_guid>
+        <update_guid_history>b0efb8394abdac9081713ab81ec857b5:-2107578371,bf5ffcf5e7bdac904110d0eafd3e1fcb:-1775769444</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">3d83853d1bbdac901784fd9c0a4bcbf5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>carlos.ventura</sys_created_by>
+        <sys_created_on>2021-01-19 18:35:02</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>520b2391c0dc4e7ea6c7255bcbafc664</sys_id>
+        <sys_metadata>fb5ffcf51bbdac901784fd9c0a4bcbca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Active Work Orders</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_fb5ffcf51bbdac901784fd9c0a4bcbca</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_fb5ffcf51bbdac901784fd9c0a4bcbca">78efb8391bbdac901784fd9c0a4bcbb5</sys_update_version>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 18:35:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

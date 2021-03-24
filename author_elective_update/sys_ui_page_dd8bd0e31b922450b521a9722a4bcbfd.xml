@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[var totalRows = gel('rowCount').value;
+var stockList = new Array();
+var okActive = false;
+
+function submitChanges(){
+	if (hasClassName(gel('submit'), 'disabled'))
+        return false;
+	
+    if(destEmpty()){
+        alert (getMessage('Please choose a destination stockroom to receive these items'));
+        return false;
+    }
+    
+    if(vendNeeded()){
+        alert(getMessage("Please choose one of the vendors to create purchase order; or uncheck the box for creating it"));
+        return false;
+    }
+	
+	if(!canOK()){
+		alert(getMessage("Please either choose an originating stock room, or create a purchase order"));
+        return false;
+    }
+    var dst = gel('QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY').value;
+    var form = document.forms['form.' + '${sys_id}'];
+    addInput(form, "HIDDEN", "destination", dst);
+	addClassName(gel('submit'), 'disabled');
+    var c = gel('cancel_or_submit');
+    c.value = "submit";
+    return true;
+}
+
+function destEmpty(){
+    var dst = gel('QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY').value;
+    if (dst =='')
+        return true;
+    return false;
+}
+
+function submitCancel(){
+    var c = gel('cancel_or_submit');
+    c.value = "cancel";
+    GlideDialogWindow.get().destroy();
+    return true;
+}
+
+function stockRoomPicked(rowNum, model){
+    var sr = document.getElementById("stock_room_" + rowNum).value;
+    if(sr != "--None--")
+        {
+        // document.getElementById("mandatory").innerHTML= '&#160;';
+        okActive = true;
+        var eItemOrder = document.getElementById("item_order_" + rowNum);
+        eItemOrder.checked = false;
+        eItemOrder.value = false;
+        document.getElementById("stock_" + rowNum).innerHTML = "";
+		var eVendor = document.getElementById("vendor_" + rowNum);
+        if(eVendor){
+            eVendor.displayValue = "--None--";
+            eVendor.value= "--None--";
+			document.getElementById("pick_vendor_" + rowNum).innerHTML= "";
+        }
+        getAvailableQuantity(model,sr,rowNum);
+    }else{
+        document.getElementById("available_" + rowNum+ "m").innerHTML= '';
+        // document.getElementById("mandatory").innerHTML= '';
+    }
+}
+
+function getAvailableQuantity(model,stockroom,rowNum) {
+    var ajax = new GlideAjax('AssetUtilsAJAX');
+    ajax.addParam('sysparm_name', 'getQuantity');
+    ajax.addParam('sysparm_model', model);
+    ajax.addParam('sysparm_stockroom', stockroom);
+    ajax.getXMLAnswer(getAvailableQuantityResponse, null, rowNum);
+}
+
+function getAvailableQuantityResponse(answer, rowNum) {    
+	var eAvail = document.getElementById("available_" + rowNum + "m");
+    eAvail.innerHTML= answer;
+    eAvail.value = answer;
+    var a = gel("available_" + rowNum);
+    a.value = answer;
+}
+
+function orderPicked(rowNum, model){
+	var eItemOrder = document.getElementById("item_order_" + rowNum);
+    if(eItemOrder.checked == true)
+        {
+        eItemOrder.value = true;
+        document.getElementById("available_" + rowNum+ "m").innerHTML= '';
+		var eStockroom = document.getElementById("stock_room_" + rowNum);	
+        eStockroom.displayValue= "--None--";
+        eStockroom.value= "--None--";
+		// document.getElementById("mandatory").innerHTML= '&#160;';
+        okActive = true;
+        showSelectVendor(rowNum, model);
+    }else{
+        eItemOrder.value = false;
+        eItemOrder.checked = false;
+        document.getElementById("stock_" + rowNum).innerHTML = "";
+        document.getElementById("pick_vendor_" + rowNum).innerHTML= "";
+        document.getElementById("vendor_" + rowNum).value= "--None--";
+		// document.getElementById("mandatory").innerHTML= '';
+		okActive = false;
+    }
+}
+
+function showSelectVendor(rowNum, model){
+    var html = "<select class=\"form-control\" style='width: 130px;' name='vendor_"+ rowNum +"' id='vendor_"+ rowNum +"' value='$[jvar_vendor]' onchange = 'vendorPicked("+rowNum+");'>";
+    html +="<option value='--None--'>${gs.getMessage('--None--')} </option>";
+    var ajax = new GlideAjax('AssetUtilsAJAX');
+    ajax.addParam('sysparm_name', 'findVendor');
+    ajax.addParam('sysparm_model', model);
+	var myAjaxArray = [html , rowNum]
+	ajax.getXMLAnswer(getAvailableVendors, null, myAjaxArray);
+}
+    
+function getAvailableVendors(answer, myAjaxArray){
+	var html = myAjaxArray[0];
+	var rowNum = myAjaxArray[1];	
+    var name ='';
+    var stock = '';
+	var stockLabel = '';
+    var vendors = answer.split('^');
+    var i = 1;
+    var vendorsLength = vendors.length;
+	
+	if(vendorsLength != 0){
+        while(i<vendorsLength){
+            name = vendors[i];
+            i++;
+            stockList[vendors[i+1]] = vendors[i];
+            i++;
+			//We only have one vendor available and need to select it by default
+			if(vendorsLength == 3)
+				html += "<option value=" + vendors[i] + " selected='selected'>"+name+"</option>";
+			else
+            	html += "<option value=" + vendors[i] + ">"+name+"</option>";
+			
+            i++;
+        }
+    }
+    html += "</select>";
+    document.getElementById("pick_vendor_" + rowNum).innerHTML= html;
+}
+
+function vendorPicked(rowNum){
+    var name = document.getElementById('vendor_' + rowNum).value;
+
+    if(name != "--None--" && stockList[name] == 'true')
+        document.getElementById("stock_" + rowNum).innerHTML = "Out of Stock";
+    else
+        document.getElementById("stock_" + rowNum).innerHTML = "";
+}
+
+function vendNeeded(){
+    for(var i=0; i <= totalRows; i++) {
+        if((document.getElementById("item_order_" + i).value == 'true') && (document.getElementById("vendor_" + i).value == '--None--'))
+            return true;
+    }
+    return false;
+}
+
+function canOK(){
+	if (okActive)
+		return true;
+	return false;
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_stave_am_source_request.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<g:ui_form>
+		<j:set var="jvar_i" value="0" />
+		<j:set var="jvar_remain" value="0" />
+		<!-- <j:set var="jvar_sys_id" value="${RP.getWindowProperties().get('sys_id')}" /> -->
+		<j:set var="jvar_sys_id" value="${RP.getParameterValue('sys_id')}" />
+		<j:set var="jvar_row_count" value="" />
+		<j:set var="jvar_stock_room" value="" />
+		<j:set var="jvar_vendor" value="" />
+		<j:set var="jvar_available" value="0" />
+		<j:set var="jvar_task_id" value="${RP.getParameterValue('task_sys_id')}" />
+		<!-- <j:set var="jvar_task_id" value="${RP.getWindowProperties().get('task_sys_id')}" /> -->
+
+		<style type="text/css"> 
+			table{
+			border-spacing:1px;
+			}
+			tr.section{
+			background:#606060;
+			color:white;
+			}
+			HTML[data-doctype=true] .lightweight-reference input{
+			height:inherit;	
+			}
+		</style>
+
+		<table width="100%">
+			<input type="hidden" name="cancel_or_submit" id="cancel_or_submit" value=""/>
+			<input type="hidden" name="req_sys_id" id="req_sys_id" value="${jvar_sys_id}"/>
+			<input type="hidden" name="task_sys_id" id="task_sys_id" value="${jvar_task_id}"/>
+
+			<g2:evaluate var="jvar_request">
+				gs.info("JPM: ${jvar_sys_id}");
+				var item = new GlideRecord("sc_req_item");
+				item.addQuery("request", "${jvar_sys_id}");
+				item.query();
+				item;
+				var jvar_i = 0;
+			</g2:evaluate>
+			
+			<g2:evaluate var="jvar_modelId">
+				var findModelId = new GlideRecord("sc_req_item");
+				findModelId.addQuery("request", "${jvar_sys_id}");
+				findModelId.query();
+				findModelId.next();
+				findModelId.cat_item.model;
+			</g2:evaluate>     
+
+			<tr>
+				<td width="65%">
+					<j:set var="jvar_mandatory" value="true"/>
+					<div class="form-group is-required form-horizontal">
+						<div class="col-md-5 text-right">
+							<g:form_label>
+								${gs.getMessage("Destination Stockroom")}
+							</g:form_label>
+						</div>
+						<div class="col-md-7">
+							<g:ui_reference name="QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY" table="alm_stockroom" id="QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY"/>
+						</div>
+					</div>	
+				</td>
+				<td width="35%">
+					<div class="form-group form-horizontal">
+						<div class="col-md-10 text-right">
+							<g:form_label>
+								${gs.getMessage("Consolidate Purchase Orders")}
+							</g:form_label>
+						</div>
+						<div class="col-md-2" style="margin-top: 4px">
+							<g2:ui_checkbox id="consolidate" name="consolidate" value="false"  class="checkbox" />
+						</div>
+					</div>	
+				</td>
+			</tr>
+		</table>
+		<table width="100%">	
+			<tr style="height: 5px;"><td></td></tr>
+			<tr class='list_header'>
+				<th colspan="3">Request Item</th>
+				<th colspan="2">Transfer Order</th>
+				<th colspan="3">Purchase Order</th>
+			</tr>
+			<tr class="list_header">
+				<th>${gs.getMessage("Number")}</th>
+				<th>${gs.getMessage("Qty Remaining")}</th>
+				<th>${gs.getMessage("Item")}</th>
+				<th>${gs.getMessage("From Stockroom")}</th>
+				<th>${gs.getMessage("In Stock")}</th>
+				<th>${gs.getMessage("Create PO")}</th>
+				<th>${gs.getMessage("Vendor")}</th>
+				<th>${gs.getMessage("Out Of Stock")}</th>
+			</tr>
+			<j2:while test="$[item.next()]">
+				<g2:evaluate var="jvar_remain" expression="item.quantity - item.quantity_sourced" />
+
+				<j2:if test="$[!item.cat_item.model.nil()  &amp;&amp; item.sourced != true ]">
+					<j2:if test="$[jvar_remain != 0]">
+						<g2:evaluate var="jvar_i" expression="jvar_i++;" />
+						<g2:evaluate jelly="true">
+							var rowClass = (parseInt(jelly.jvar_i) + 1) % 2 == 0 ? 'list_even' : 'list_odd';
+						</g2:evaluate>
+
+						<tr style="height: 4px;"><td></td></tr>
+						<tr class="$[rowClass]">
+							<td id="number_$[jvar_i]" value="$[item.number]">$[item.number]</td>
+							<td type="text" id="quantity_$[jvar_i]m" name="quantity_$[jvar_i]m" align="center" value="$[jvar_remain]"> $[jvar_remain]</td>
+							<td style="overflow: hidden;" id="name_$[jvar_i]" value="$[item.cat_item.name]">$[item.cat_item.name]</td>
+
+							<td>
+								<select class="form-control" style="width: 180px; overflow: hidden;" name="stock_room_$[jvar_i]" id="stock_room_$[jvar_i]" value="${jvar_stock_room}"  onchange="stockRoomPicked($[jvar_i], '$[item.cat_item.model]');" >
+									<g2:evaluate var="jvar_room" jelly = "true">
+										var gr2 = new GlideAggregate("alm_asset");
+										var modelId = jelly.jvar_modelId;
+										gr2.addQuery("model", modelId);
+										gr2.addQuery("install_status", "6");
+										gr2.addQuery("substatus", "available");
+										gr2.groupBy("stockroom");
+										gr2.query();
+										gr2;
+									</g2:evaluate>
+
+									<option value="--None--">${gs.getMessage("--None--")} </option>
+									<j2:while test="$[gr2.next()]">
+										<option value="$[gr2.stockroom]">$[gr2.stockroom.name] </option>
+									</j2:while>
+								</select>                     
+							</td>
+
+							<td name="available_$[jvar_i]m" id="available_$[jvar_i]m" align="center">
+							</td>
+
+							<td align="center">
+								<span class="input-group-checkbox col-sm-6"> 			
+									<input type="checkbox" class="checkbox" id="item_order_$[jvar_i]" name="item_order_$[jvar_i]" value="false" onclick="orderPicked($[jvar_i],'$[item.cat_item.model]');"/>
+									<label for="item_order_$[jvar_i]" class="checkbox-label"></label>
+								</span>						
+							</td>
+
+							<td name="pick_vendor_$[jvar_i]" id="pick_vendor_$[jvar_i]">
+							</td>
+
+							<td name="stock_$[jvar_i]" id="stock_$[jvar_i]">
+							</td>
+						</tr>
+
+						<tr class="item2">
+							<input type="hidden" id="item_sysId_$[jvar_i]" name="item_sysId_$[jvar_i]" value="$[item.sys_id]"></input>
+							<input type="hidden" id="item_model_$[jvar_i]" name="item_model_$[jvar_i]" value="$[item.cat_item.model]"></input>
+							<input type="hidden" name="quantity_$[jvar_i]" id="quantity_$[jvar_i]" value="$[item.quantity]"></input>
+							<input type="hidden" name="available_$[jvar_i]" id="available_$[jvar_i]" value="$[jvar_available]"></input>
+							<input type="hidden" name="remain_$[jvar_i]" id="available_$[jvar_i]" value="$[jvar_remain]"></input>
+							<input type="hidden" id="sourced_$[jvar_i]" name="sourced_$[jvar_i]" value="$[item.sourced]"></input>
+						</tr>
+					</j2:if>
+				</j2:if>
+			</j2:while>
+			<tr style="height: 4px;"><td></td></tr>
+			<tr id="buttons">
+				<td colspan="8" align="right">
+					<button class="btn btn-primary  action_context edit-close pull-right" type="submit" id="submit" onclick="return submitChanges();">${gs.getMessage('OK')}</button>
+					<button class="btn btn-default  action_context edit-close pull-right" type="submit" id="cancel" onclick="return submitCancel();">${gs.getMessage('Cancel')}</button>
+				</td>
+			</tr>
+			<input type="hidden" name="rowCount" id="rowCount" value="$[jvar_i]" ></input>
+		</table>
+	</g:ui_form>
+
+</j:jelly>]]></html>
+        <name>source_request</name>
+        <processing_script><![CDATA[if(cancel_or_submit == "submit"){
+    var numberConsumed = 0;
+    processRequest();
+}
+var urlOnStack = GlideSession.get().getStack().bottom();
+response.sendRedirect(urlOnStack);
+
+function processRequest(){
+    if(destination != undefined)
+        var dest = destination;
+	var numUnsourcedLines = 0;
+	var taskSysId = eval("task_sys_id");
+    for(var i=0 ; i<= rowCount; i++){
+        var sys = eval("item_sysId_" + i);
+        var model = eval("item_model_" + i);
+        var from = eval("stock_room_" + i);
+        var quant = eval("quantity_" + i);
+		var remain = eval("remain_" + i);
+        var avail = 0;
+        try{
+            avail = (new AssetUtils()).getAvailableQuantity(model, from);
+        }catch(e) {}
+		
+        if((avail !=0) && (parseInt(quant) > 0) && (parseInt(quant) >= parseInt(avail)))
+            var transAmount = parseInt(avail);
+        if((avail !=0) && (parseInt(quant) > 0) && (parseInt(quant) < parseInt(avail)))
+            var transAmount = parseInt(quant);
+		if(transAmount > remain)
+			var transAmount = parseInt(remain);
+		
+		var pOrder = false;
+        try {
+            pOrder = eval("item_order_" + i.toString());
+        } catch(e) {}
+        
+        var cons = consolidate;
+        var asset = new AssetUtils();
+        if (pOrder == false && from != "--None--"  && transAmount > 0)
+            {
+            var gr = new GlideRecord('cmdb_model')
+            gr.get(model);
+            // checking to see if we are using an asset or a consumable
+            if (asset.getAssetOrConsumable(gr) == 'consumable')
+                {
+                var req = new GlideRecord("alm_transfer_order_line");
+                req.from_stockroom = from;
+                req.to_stockroom = dest;
+                req.quantity_requested = transAmount;
+                req.model = model;
+                req.request_line = sys;
+                req.insert();
+                gs.addInfoMessage(gs.getMessage("A Transfer order to transfer {0} of \'{1}\' has been created", [transAmount, req.model.display_name]));
+                
+            } else{
+                // creating TOL for assets
+                for (var j=0; j< transAmount ; j++){
+                    var req = new GlideRecord("alm_transfer_order_line");
+                    req.from_stockroom = from;
+                    req.to_stockroom = dest;
+                    req.model = gr.sys_id;
+                    req.request_line = sys;
+                    req.quantity_requested = 1;
+                    req.asset = (new AssetUtils()).getFirstItem(gr, from, '6', 'available');
+                    req.insert();
+                }
+                gs.addInfoMessage(gs.getMessage("A Transfer order to transfer {0} of \'{1}\' has been created", [transAmount, req.model.display_name]));
+            }
+            // updating the item
+            var item = new GlideRecord("sc_req_item");
+            item.get(sys);
+            // item.quantity = item.quantity - transAmount;
+            item.quantity_sourced = parseInt(transAmount) + parseInt(item.quantity_sourced);
+			var qRemain = parseInt(item.quantity) - parseInt(item.quantity_sourced);
+            if( qRemain == 0)
+                item.sourced = true;
+            else
+				numUnsourcedLines++;
+            item.update();
+        } else if((pOrder == 'true') && (quant != 0))
+        {
+            // making purchase order for the rest of left quantities
+            var vendor = eval("vendor_" + i).split('|');
+			var vendorTable = vendor[0];
+			var catItemId = vendor[1];
+			var vendorId;
+			var vendorPrice = 0;
+			var listPrice = 0;
+			var catItemRecord = new GlideRecord(vendorTable);
+			
+			var item = new GlideRecord("sc_req_item");
+            item.get(sys);
+			
+			catItemRecord.get('sys_id', catItemId);
+			if(vendorTable == 'pc_vendor_cat_item' || vendorTable == 'sc_cat_item') {
+				vendorId = catItemRecord.vendor;
+				vendorPrice = catItemRecord.price;
+				listPrice = catItemRecord.list_price;
+			}
+			
+			var qRemain = parseInt(item.quantity) - parseInt(item.quantity_sourced);
+            item.quantity_sourced = parseInt(qRemain) + parseInt(item.quantity_sourced);
+            // mark the item as sourced
+            item.sourced = true;
+            item.update();
+            (new ProcurementUtils()).createPOLine('', item, qRemain, vendorId, cons, dest, vendorPrice, listPrice);
+			gs.addInfoMessage(gs.getMessage("A Purchase order to purchase {0} of \'{1}\' has been created", [qRemain, item.cat_item.name]));
+        } else
+		{
+			numUnsourcedLines++;
+		}
+    }
+
+	// If all lines are sourced, close the task
+	if (numUnsourcedLines == 0) {
+		var task = new GlideRecord("sc_task");
+		task.get(taskSysId);
+		task.setValue("state", 3);
+		task.update();
+	}
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-18 22:41:01</sys_created_on>
+        <sys_id>dd8bd0e31b922450b521a9722a4bcbfd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>source_request</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sys_ui_page_dd8bd0e31b922450b521a9722a4bcbfd</sys_update_name>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-18 23:07:51</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sys_ui_page_dd8bd0e31b922450b521a9722a4bcbfd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[var totalRows = gel('rowCount').value;
+var stockList = new Array();
+var okActive = false;
+
+function submitChanges(){
+	if (hasClassName(gel('submit'), 'disabled'))
+        return false;
+	
+    if(destEmpty()){
+        alert (getMessage('Please choose a destination stockroom to receive these items'));
+        return false;
+    }
+    
+    if(vendNeeded()){
+        alert(getMessage("Please choose one of the vendors to create purchase order; or uncheck the box for creating it"));
+        return false;
+    }
+	
+	if(!canOK()){
+		alert(getMessage("Please either choose an originating stock room, or create a purchase order"));
+        return false;
+    }
+    var dst = gel('QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY').value;
+    var form = document.forms['form.' + '${sys_id}'];
+    addInput(form, "HIDDEN", "destination", dst);
+	addClassName(gel('submit'), 'disabled');
+    var c = gel('cancel_or_submit');
+    c.value = "submit";
+    return true;
+}
+
+function destEmpty(){
+    var dst = gel('QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY').value;
+    if (dst =='')
+        return true;
+    return false;
+}
+
+function submitCancel(){
+    var c = gel('cancel_or_submit');
+    c.value = "cancel";
+    GlideDialogWindow.get().destroy();
+    return true;
+}
+
+function stockRoomPicked(rowNum, model){
+    var sr = document.getElementById("stock_room_" + rowNum).value;
+    if(sr != "--None--")
+        {
+        // document.getElementById("mandatory").innerHTML= '&amp;#160;';
+        okActive = true;
+        var eItemOrder = document.getElementById("item_order_" + rowNum);
+        eItemOrder.checked = false;
+        eItemOrder.value = false;
+        document.getElementById("stock_" + rowNum).innerHTML = "";
+		var eVendor = document.getElementById("vendor_" + rowNum);
+        if(eVendor){
+            eVendor.displayValue = "--None--";
+            eVendor.value= "--None--";
+			document.getElementById("pick_vendor_" + rowNum).innerHTML= "";
+        }
+        getAvailableQuantity(model,sr,rowNum);
+    }else{
+        document.getElementById("available_" + rowNum+ "m").innerHTML= '';
+        // document.getElementById("mandatory").innerHTML= '';
+    }
+}
+
+function getAvailableQuantity(model,stockroom,rowNum) {
+    var ajax = new GlideAjax('AssetUtilsAJAX');
+    ajax.addParam('sysparm_name', 'getQuantity');
+    ajax.addParam('sysparm_model', model);
+    ajax.addParam('sysparm_stockroom', stockroom);
+    ajax.getXMLAnswer(getAvailableQuantityResponse, null, rowNum);
+}
+
+function getAvailableQuantityResponse(answer, rowNum) {    
+	var eAvail = document.getElementById("available_" + rowNum + "m");
+    eAvail.innerHTML= answer;
+    eAvail.value = answer;
+    var a = gel("available_" + rowNum);
+    a.value = answer;
+}
+
+function orderPicked(rowNum, model){
+	var eItemOrder = document.getElementById("item_order_" + rowNum);
+    if(eItemOrder.checked == true)
+        {
+        eItemOrder.value = true;
+        document.getElementById("available_" + rowNum+ "m").innerHTML= '';
+		var eStockroom = document.getElementById("stock_room_" + rowNum);	
+        eStockroom.displayValue= "--None--";
+        eStockroom.value= "--None--";
+		// document.getElementById("mandatory").innerHTML= '&amp;#160;';
+        okActive = true;
+        showSelectVendor(rowNum, model);
+    }else{
+        eItemOrder.value = false;
+        eItemOrder.checked = false;
+        document.getElementById("stock_" + rowNum).innerHTML = "";
+        document.getElementById("pick_vendor_" + rowNum).innerHTML= "";
+        document.getElementById("vendor_" + rowNum).value= "--None--";
+		// document.getElementById("mandatory").innerHTML= '';
+		okActive = false;
+    }
+}
+
+function showSelectVendor(rowNum, model){
+    var html = "&lt;select class=\"form-control\" style='width: 130px;' name='vendor_"+ rowNum +"' id='vendor_"+ rowNum +"' value='$[jvar_vendor]' onchange = 'vendorPicked("+rowNum+");'&gt;";
+    html +="&lt;option value='--None--'&gt;${gs.getMessage('--None--')} &lt;/option&gt;";
+    var ajax = new GlideAjax('AssetUtilsAJAX');
+    ajax.addParam('sysparm_name', 'findVendor');
+    ajax.addParam('sysparm_model', model);
+	var myAjaxArray = [html , rowNum]
+	ajax.getXMLAnswer(getAvailableVendors, null, myAjaxArray);
+}
+    
+function getAvailableVendors(answer, myAjaxArray){
+	var html = myAjaxArray[0];
+	var rowNum = myAjaxArray[1];	
+    var name ='';
+    var stock = '';
+	var stockLabel = '';
+    var vendors = answer.split('^');
+    var i = 1;
+    var vendorsLength = vendors.length;
+	
+	if(vendorsLength != 0){
+        while(i&lt;vendorsLength){
+            name = vendors[i];
+            i++;
+            stockList[vendors[i+1]] = vendors[i];
+            i++;
+			//We only have one vendor available and need to select it by default
+			if(vendorsLength == 3)
+				html += "&lt;option value=" + vendors[i] + " selected='selected'&gt;"+name+"&lt;/option&gt;";
+			else
+            	html += "&lt;option value=" + vendors[i] + "&gt;"+name+"&lt;/option&gt;";
+			
+            i++;
+        }
+    }
+    html += "&lt;/select&gt;";
+    document.getElementById("pick_vendor_" + rowNum).innerHTML= html;
+}
+
+function vendorPicked(rowNum){
+    var name = document.getElementById('vendor_' + rowNum).value;
+
+    if(name != "--None--" &amp;&amp; stockList[name] == 'true')
+        document.getElementById("stock_" + rowNum).innerHTML = "Out of Stock";
+    else
+        document.getElementById("stock_" + rowNum).innerHTML = "";
+}
+
+function vendNeeded(){
+    for(var i=0; i &lt;= totalRows; i++) {
+        if((document.getElementById("item_order_" + i).value == 'true') &amp;&amp; (document.getElementById("vendor_" + i).value == '--None--'))
+            return true;
+    }
+    return false;
+}
+
+function canOK(){
+	if (okActive)
+		return true;
+	return false;
+}]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_stave_am_source_request.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+	&lt;g:ui_form&gt;
+		&lt;j:set var="jvar_i" value="0" /&gt;
+		&lt;j:set var="jvar_remain" value="0" /&gt;
+		&lt;!-- &lt;j:set var="jvar_sys_id" value="${RP.getWindowProperties().get('sys_id')}" /&gt; --&gt;
+		&lt;j:set var="jvar_sys_id" value="${RP.getParameterValue('sys_id')}" /&gt;
+		&lt;j:set var="jvar_row_count" value="" /&gt;
+		&lt;j:set var="jvar_stock_room" value="" /&gt;
+		&lt;j:set var="jvar_vendor" value="" /&gt;
+		&lt;j:set var="jvar_available" value="0" /&gt;
+		&lt;j:set var="jvar_task_id" value="${RP.getParameterValue('task_sys_id')}" /&gt;
+		&lt;!-- &lt;j:set var="jvar_task_id" value="${RP.getWindowProperties().get('task_sys_id')}" /&gt; --&gt;
+
+		&lt;style type="text/css"&gt; 
+			table{
+			border-spacing:1px;
+			}
+			tr.section{
+			background:#606060;
+			color:white;
+			}
+			HTML[data-doctype=true] .lightweight-reference input{
+			height:inherit;	
+			}
+		&lt;/style&gt;
+
+		&lt;table width="100%"&gt;
+			&lt;input type="hidden" name="cancel_or_submit" id="cancel_or_submit" value=""/&gt;
+			&lt;input type="hidden" name="req_sys_id" id="req_sys_id" value="${jvar_sys_id}"/&gt;
+			&lt;input type="hidden" name="task_sys_id" id="task_sys_id" value="${jvar_task_id}"/&gt;
+
+			&lt;g2:evaluate var="jvar_request"&gt;
+				gs.info("JPM: ${jvar_sys_id}");
+				var item = new GlideRecord("sc_req_item");
+				item.addQuery("request", "${jvar_sys_id}");
+				item.query();
+				item;
+				var jvar_i = 0;
+			&lt;/g2:evaluate&gt;
+			
+			&lt;g2:evaluate var="jvar_modelId"&gt;
+				var findModelId = new GlideRecord("sc_req_item");
+				findModelId.addQuery("request", "${jvar_sys_id}");
+				findModelId.query();
+				findModelId.next();
+				findModelId.cat_item.model;
+			&lt;/g2:evaluate&gt;     
+
+			&lt;tr&gt;
+				&lt;td width="65%"&gt;
+					&lt;j:set var="jvar_mandatory" value="true"/&gt;
+					&lt;div class="form-group is-required form-horizontal"&gt;
+						&lt;div class="col-md-5 text-right"&gt;
+							&lt;g:form_label&gt;
+								${gs.getMessage("Destination Stockroom")}
+							&lt;/g:form_label&gt;
+						&lt;/div&gt;
+						&lt;div class="col-md-7"&gt;
+							&lt;g:ui_reference name="QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY" table="alm_stockroom" id="QUERY:type!=e2aa2b3f3763100044e0bfc8bcbe5dde^ORtypeISEMPTY"/&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;	
+				&lt;/td&gt;
+				&lt;td width="35%"&gt;
+					&lt;div class="form-group form-horizontal"&gt;
+						&lt;div class="col-md-10 text-right"&gt;
+							&lt;g:form_label&gt;
+								${gs.getMessage("Consolidate Purchase Orders")}
+							&lt;/g:form_label&gt;
+						&lt;/div&gt;
+						&lt;div class="col-md-2" style="margin-top: 4px"&gt;
+							&lt;g2:ui_checkbox id="consolidate" name="consolidate" value="false"  class="checkbox" /&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;	
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;table width="100%"&gt;	
+			&lt;tr style="height: 5px;"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+			&lt;tr class='list_header'&gt;
+				&lt;th colspan="3"&gt;Request Item&lt;/th&gt;
+				&lt;th colspan="2"&gt;Transfer Order&lt;/th&gt;
+				&lt;th colspan="3"&gt;Purchase Order&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr class="list_header"&gt;
+				&lt;th&gt;${gs.getMessage("Number")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("Qty Remaining")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("Item")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("From Stockroom")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("In Stock")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("Create PO")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("Vendor")}&lt;/th&gt;
+				&lt;th&gt;${gs.getMessage("Out Of Stock")}&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;j2:while test="$[item.next()]"&gt;
+				&lt;g2:evaluate var="jvar_remain" expression="item.quantity - item.quantity_sourced" /&gt;
+
+				&lt;j2:if test="$[!item.cat_item.model.nil()  &amp;amp;&amp;amp; item.sourced != true ]"&gt;
+					&lt;j2:if test="$[jvar_remain != 0]"&gt;
+						&lt;g2:evaluate var="jvar_i" expression="jvar_i++;" /&gt;
+						&lt;g2:evaluate jelly="true"&gt;
+							var rowClass = (parseInt(jelly.jvar_i) + 1) % 2 == 0 ? 'list_even' : 'list_odd';
+						&lt;/g2:evaluate&gt;
+
+						&lt;tr style="height: 4px;"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+						&lt;tr class="$[rowClass]"&gt;
+							&lt;td id="number_$[jvar_i]" value="$[item.number]"&gt;$[item.number]&lt;/td&gt;
+							&lt;td type="text" id="quantity_$[jvar_i]m" name="quantity_$[jvar_i]m" align="center" value="$[jvar_remain]"&gt; $[jvar_remain]&lt;/td&gt;
+							&lt;td style="overflow: hidden;" id="name_$[jvar_i]" value="$[item.cat_item.name]"&gt;$[item.cat_item.name]&lt;/td&gt;
+
+							&lt;td&gt;
+								&lt;select class="form-control" style="width: 180px; overflow: hidden;" name="stock_room_$[jvar_i]" id="stock_room_$[jvar_i]" value="${jvar_stock_room}"  onchange="stockRoomPicked($[jvar_i], '$[item.cat_item.model]');" &gt;
+									&lt;g2:evaluate var="jvar_room" jelly = "true"&gt;
+										var gr2 = new GlideAggregate("alm_asset");
+										var modelId = jelly.jvar_modelId;
+										gr2.addQuery("model", modelId);
+										gr2.addQuery("install_status", "6");
+										gr2.addQuery("substatus", "available");
+										gr2.groupBy("stockroom");
+										gr2.query();
+										gr2;
+									&lt;/g2:evaluate&gt;
+
+									&lt;option value="--None--"&gt;${gs.getMessage("--None--")} &lt;/option&gt;
+									&lt;j2:while test="$[gr2.next()]"&gt;
+										&lt;option value="$[gr2.stockroom]"&gt;$[gr2.stockroom.name] &lt;/option&gt;
+									&lt;/j2:while&gt;
+								&lt;/select&gt;                     
+							&lt;/td&gt;
+
+							&lt;td name="available_$[jvar_i]m" id="available_$[jvar_i]m" align="center"&gt;
+							&lt;/td&gt;
+
+							&lt;td align="center"&gt;
+								&lt;span class="input-group-checkbox col-sm-6"&gt; 			
+									&lt;input type="checkbox" class="checkbox" id="item_order_$[jvar_i]" name="item_order_$[jvar_i]" value="false" onclick="orderPicked($[jvar_i],'$[item.cat_item.model]');"/&gt;
+									&lt;label for="item_order_$[jvar_i]" class="checkbox-label"&gt;&lt;/label&gt;
+								&lt;/span&gt;						
+							&lt;/td&gt;
+
+							&lt;td name="pick_vendor_$[jvar_i]" id="pick_vendor_$[jvar_i]"&gt;
+							&lt;/td&gt;
+
+							&lt;td name="stock_$[jvar_i]" id="stock_$[jvar_i]"&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+
+						&lt;tr class="item2"&gt;
+							&lt;input type="hidden" id="item_sysId_$[jvar_i]" name="item_sysId_$[jvar_i]" value="$[item.sys_id]"&gt;&lt;/input&gt;
+							&lt;input type="hidden" id="item_model_$[jvar_i]" name="item_model_$[jvar_i]" value="$[item.cat_item.model]"&gt;&lt;/input&gt;
+							&lt;input type="hidden" name="quantity_$[jvar_i]" id="quantity_$[jvar_i]" value="$[item.quantity]"&gt;&lt;/input&gt;
+							&lt;input type="hidden" name="available_$[jvar_i]" id="available_$[jvar_i]" value="$[jvar_available]"&gt;&lt;/input&gt;
+							&lt;input type="hidden" name="remain_$[jvar_i]" id="available_$[jvar_i]" value="$[jvar_remain]"&gt;&lt;/input&gt;
+							&lt;input type="hidden" id="sourced_$[jvar_i]" name="sourced_$[jvar_i]" value="$[item.sourced]"&gt;&lt;/input&gt;
+						&lt;/tr&gt;
+					&lt;/j2:if&gt;
+				&lt;/j2:if&gt;
+			&lt;/j2:while&gt;
+			&lt;tr style="height: 4px;"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+			&lt;tr id="buttons"&gt;
+				&lt;td colspan="8" align="right"&gt;
+					&lt;button class="btn btn-primary  action_context edit-close pull-right" type="submit" id="submit" onclick="return submitChanges();"&gt;${gs.getMessage('OK')}&lt;/button&gt;
+					&lt;button class="btn btn-default  action_context edit-close pull-right" type="submit" id="cancel" onclick="return submitCancel();"&gt;${gs.getMessage('Cancel')}&lt;/button&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;input type="hidden" name="rowCount" id="rowCount" value="$[jvar_i]" &gt;&lt;/input&gt;
+		&lt;/table&gt;
+	&lt;/g:ui_form&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;source_request&lt;/name&gt;&lt;processing_script&gt;&lt;![CDATA[if(cancel_or_submit == "submit"){
+    var numberConsumed = 0;
+    processRequest();
+}
+var urlOnStack = GlideSession.get().getStack().bottom();
+response.sendRedirect(urlOnStack);
+
+function processRequest(){
+    if(destination != undefined)
+        var dest = destination;
+	var numUnsourcedLines = 0;
+	var taskSysId = eval("task_sys_id");
+    for(var i=0 ; i&lt;= rowCount; i++){
+        var sys = eval("item_sysId_" + i);
+        var model = eval("item_model_" + i);
+        var from = eval("stock_room_" + i);
+        var quant = eval("quantity_" + i);
+		var remain = eval("remain_" + i);
+        var avail = 0;
+        try{
+            avail = (new AssetUtils()).getAvailableQuantity(model, from);
+        }catch(e) {}
+		
+        if((avail !=0) &amp;&amp; (parseInt(quant) &gt; 0) &amp;&amp; (parseInt(quant) &gt;= parseInt(avail)))
+            var transAmount = parseInt(avail);
+        if((avail !=0) &amp;&amp; (parseInt(quant) &gt; 0) &amp;&amp; (parseInt(quant) &lt; parseInt(avail)))
+            var transAmount = parseInt(quant);
+		if(transAmount &gt; remain)
+			var transAmount = parseInt(remain);
+		
+		var pOrder = false;
+        try {
+            pOrder = eval("item_order_" + i.toString());
+        } catch(e) {}
+        
+        var cons = consolidate;
+        var asset = new AssetUtils();
+        if (pOrder == false &amp;&amp; from != "--None--"  &amp;&amp; transAmount &gt; 0)
+            {
+            var gr = new GlideRecord('cmdb_model')
+            gr.get(model);
+            // checking to see if we are using an asset or a consumable
+            if (asset.getAssetOrConsumable(gr) == 'consumable')
+                {
+                var req = new GlideRecord("alm_transfer_order_line");
+                req.from_stockroom = from;
+                req.to_stockroom = dest;
+                req.quantity_requested = transAmount;
+                req.model = model;
+                req.request_line = sys;
+                req.insert();
+                gs.addInfoMessage(gs.getMessage("A Transfer order to transfer {0} of \'{1}\' has been created", [transAmount, req.model.display_name]));
+                
+            } else{
+                // creating TOL for assets
+                for (var j=0; j&lt; transAmount ; j++){
+                    var req = new GlideRecord("alm_transfer_order_line");
+                    req.from_stockroom = from;
+                    req.to_stockroom = dest;
+                    req.model = gr.sys_id;
+                    req.request_line = sys;
+                    req.quantity_requested = 1;
+                    req.asset = (new AssetUtils()).getFirstItem(gr, from, '6', 'available');
+                    req.insert();
+                }
+                gs.addInfoMessage(gs.getMessage("A Transfer order to transfer {0} of \'{1}\' has been created", [transAmount, req.model.display_name]));
+            }
+            // updating the item
+            var item = new GlideRecord("sc_req_item");
+            item.get(sys);
+            // item.quantity = item.quantity - transAmount;
+            item.quantity_sourced = parseInt(transAmount) + parseInt(item.quantity_sourced);
+			var qRemain = parseInt(item.quantity) - parseInt(item.quantity_sourced);
+            if( qRemain == 0)
+                item.sourced = true;
+            else
+				numUnsourcedLines++;
+            item.update();
+        } else if((pOrder == 'true') &amp;&amp; (quant != 0))
+        {
+            // making purchase order for the rest of left quantities
+            var vendor = eval("vendor_" + i).split('|');
+			var vendorTable = vendor[0];
+			var catItemId = vendor[1];
+			var vendorId;
+			var vendorPrice = 0;
+			var listPrice = 0;
+			var catItemRecord = new GlideRecord(vendorTable);
+			
+			var item = new GlideRecord("sc_req_item");
+            item.get(sys);
+			
+			catItemRecord.get('sys_id', catItemId);
+			if(vendorTable == 'pc_vendor_cat_item' || vendorTable == 'sc_cat_item') {
+				vendorId = catItemRecord.vendor;
+				vendorPrice = catItemRecord.price;
+				listPrice = catItemRecord.list_price;
+			}
+			
+			var qRemain = parseInt(item.quantity) - parseInt(item.quantity_sourced);
+            item.quantity_sourced = parseInt(qRemain) + parseInt(item.quantity_sourced);
+            // mark the item as sourced
+            item.sourced = true;
+            item.update();
+            (new ProcurementUtils()).createPOLine('', item, qRemain, vendorId, cons, dest, vendorPrice, listPrice);
+			gs.addInfoMessage(gs.getMessage("A Purchase order to purchase {0} of \'{1}\' has been created", [qRemain, item.cat_item.name]));
+        } else
+		{
+			numUnsourcedLines++;
+		}
+    }
+
+	// If all lines are sourced, close the task
+	if (numUnsourcedLines == 0) {
+		var task = new GlideRecord("sc_task");
+		task.get(taskSysId);
+		task.setValue("state", 3);
+		task.update();
+	}
+}]]&gt;&lt;/processing_script&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jonas.perusquia&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-02-18 22:41:01&lt;/sys_created_on&gt;&lt;sys_id&gt;dd8bd0e31b922450b521a9722a4bcbfd&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;source_request&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_dd8bd0e31b922450b521a9722a4bcbfd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jonas.perusquia&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-02-18 23:07:51&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>391116103</payload_hash>
+        <record_name>source_request</record_name>
+        <reverted_from/>
+        <source>d641bcff1b7de0d067a4a8e82d4bcbfd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-18 23:07:51</sys_created_on>
+        <sys_id>aea1602f1b922450b521a9722a4bcb32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177b7664f430000001</sys_recorded_at>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-18 23:07:51</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>66a1602fea922450698f80f69f021732</update_guid>
+        <update_guid_history>66a1602fea922450698f80f69f021732:391116103,e3816cabe3922450ddb237ed91479b67:-770140947,0e5fd06bd7922450d05aac9e8f8d1f8b:327036389,0b4e142b7f92245031c514cbcb035385:-1977901745,518b9827239224504988cc85713bdfd6:-1123554891</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-18 23:15:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>12acbda21069453c9c487f605bc5f524</sys_id>
+        <sys_metadata>dd8bd0e31b922450b521a9722a4bcbfd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>source_request</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sys_ui_page_dd8bd0e31b922450b521a9722a4bcbfd</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_dd8bd0e31b922450b521a9722a4bcbfd">aea1602f1b922450b521a9722a4bcb32</sys_update_version>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-18 23:15:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

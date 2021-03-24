@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bc73e72b1ba2289067a4a8e82d4bcb47</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Chart V2">2480f7bfdb123b4094ea6693ca961954</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-02-26 18:15:38</sys_created_on>
+        <sys_id>cc8b608adbee28100e9c71f23996198f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Assets by Status</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_cc8b608adbee28100e9c71f23996198f</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 23:42:17</sys_updated_on>
+        <table>alm_asset</table>
+        <title>Assets by Status</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"id_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"group_by": {
+		"value": "install_status",
+		"displayValue": "install_status"
+	},
+	"group_count": {
+		"value": "",
+		"displayValue": ""
+	},
+	"sum_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"dot_walk_table_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"form_page_id": {
+		"value": "",
+		"displayValue": ""
+	},
+	"title_alignment": {
+		"value": "",
+		"displayValue": ""
+	},
+	"roles": {
+		"value": "",
+		"displayValue": ""
+	},
+	"chart_theme": {
+		"value": "",
+		"displayValue": ""
+	},
+	"type": {
+		"value": "",
+		"displayValue": ""
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=cc8b608adbee28100e9c71f23996198f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_instance_vlist_cc8b608adbee28100e9c71f23996198f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_vlist"&gt;&lt;sp_instance_vlist action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field/&gt;&lt;field_list/&gt;&lt;filter/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;maximum_entries&gt;5&lt;/maximum_entries&gt;&lt;order&gt;1&lt;/order&gt;&lt;order_by/&gt;&lt;order_direction&gt;asc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;bc73e72b1ba2289067a4a8e82d4bcb47&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="Chart V2"&gt;2480f7bfdb123b4094ea6693ca961954&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_vlist&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jason.garcia&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-02-26 18:15:38&lt;/sys_created_on&gt;&lt;sys_id&gt;cc8b608adbee28100e9c71f23996198f&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Assets by Status&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_vlist_cc8b608adbee28100e9c71f23996198f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jason.garcia&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 23:42:17&lt;/sys_updated_on&gt;&lt;table&gt;alm_asset&lt;/table&gt;&lt;title&gt;Assets by Status&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"id_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"group_by": {
+		"value": "install_status",
+		"displayValue": "install_status"
+	},
+	"group_count": {
+		"value": "",
+		"displayValue": ""
+	},
+	"sum_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"dot_walk_table_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"form_page_id": {
+		"value": "",
+		"displayValue": ""
+	},
+	"title_alignment": {
+		"value": "",
+		"displayValue": ""
+	},
+	"roles": {
+		"value": "",
+		"displayValue": ""
+	},
+	"chart_theme": {
+		"value": "",
+		"displayValue": ""
+	},
+	"type": {
+		"value": "",
+		"displayValue": ""
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_vlist&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=cc8b608adbee28100e9c71f23996198f"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1798994823</payload_hash>
+        <record_name>Assets by Status</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 23:42:17</sys_created_on>
+        <sys_id>a536eb2f1ba2289067a4a8e82d4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177fa7881140000001</sys_recorded_at>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 23:42:17</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>6d36eb2fe9a2289027f8b18498a79229</update_guid>
+        <update_guid_history>6d36eb2fe9a2289027f8b18498a79229:1798994823,d2266b2fe9a228908db55aeb67f7fd32:1556218312,21e01f2f742228903805e8dc19969874:1131957572,6479bcc6f8226810fedad4b1091dcf52:2029271628,448b608aabee2810fc48827e2959fc91:1005443771</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">90c8eb231be2289067a4a8e82d4bcb37</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 23:53:23</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>978b9b8685074d489c272999a2e39804</sys_id>
+        <sys_metadata>cc8b608adbee28100e9c71f23996198f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assets by Status</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_cc8b608adbee28100e9c71f23996198f</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_cc8b608adbee28100e9c71f23996198f">a536eb2f1ba2289067a4a8e82d4bcb2a</sys_update_version>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 23:53:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

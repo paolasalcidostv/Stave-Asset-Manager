@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="stvScWidgetFilters">fa3a4e4bdb0e7700f99a41deaa9619da</sp_dependency>
+        <sp_widget display_value="Icon With Count 2">e5dea66f1b6ee49067a4a8e82d4bcbb1</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:40:21</sys_created_on>
+        <sys_id>eddea66f1b6ee49067a4a8e82d4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>stvScWidgetFilters.Icon With Count 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_eddea66f1b6ee49067a4a8e82d4bcbb3</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:40:21</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>m2m_sp_widget_dependency_eddea66f1b6ee49067a4a8e82d4bcbb3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="stvScWidgetFilters">fa3a4e4bdb0e7700f99a41deaa9619da</sp_dependency><sp_widget display_value="Icon With Count 2">e5dea66f1b6ee49067a4a8e82d4bcbb1</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>jason.garcia</sys_created_by><sys_created_on>2021-03-03 19:40:21</sys_created_on><sys_id>eddea66f1b6ee49067a4a8e82d4bcbb3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>stvScWidgetFilters.Icon With Count 2</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>m2m_sp_widget_dependency_eddea66f1b6ee49067a4a8e82d4bcbb3</sys_update_name><sys_updated_by>jason.garcia</sys_updated_by><sys_updated_on>2021-03-03 19:40:21</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>-162096343</payload_hash>
+        <record_name>stvScWidgetFilters.Icon With Count 2</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:40:21</sys_created_on>
+        <sys_id>a9dea66f1b6ee49067a4a8e82d4bcbb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177f99b01140000001</sys_recorded_at>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:40:21</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>a1dea66ff56ee4909339497e7a621db6</update_guid>
+        <update_guid_history>a1dea66ff56ee4909339497e7a621db6:-162096343</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">851fee6f1b6ee49067a4a8e82d4bcbbb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:41:24</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>bda274d2fc204b58bccb856654f63640</sys_id>
+        <sys_metadata>eddea66f1b6ee49067a4a8e82d4bcbb3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>stvScWidgetFilters.Icon With Count 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_eddea66f1b6ee49067a4a8e82d4bcbb3</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_eddea66f1b6ee49067a4a8e82d4bcbb3">a9dea66f1b6ee49067a4a8e82d4bcbb6</sys_update_version>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:41:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

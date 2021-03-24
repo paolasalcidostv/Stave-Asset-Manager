@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">e8b8a968dbf12010e2620181ca9619a6</sp_column>
+        <sp_widget display_value="Asset Lookup">b6ee3a28dbcfbf00f99a41deaa9619ec</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:05:01</sys_created_on>
+        <sys_id>24b8a968dbf12010e2620181ca9619a8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Asset Lookup</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_24b8a968dbf12010e2620181ca9619a8</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-01-19 21:58:20</sys_updated_on>
+        <title>Asset Lookup</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"lookup_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"asset_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"fleet_page": {
+		"value": "stv_sc_asset",
+		"displayValue": "stv_sc_asset"
+	},
+	"model_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"stockroom_page": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=24b8a968dbf12010e2620181ca9619a8"/>
+</record_update>

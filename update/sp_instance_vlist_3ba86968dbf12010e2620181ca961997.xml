@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>number</display_field>
+        <field_list/>
+        <filter table="x_stave_sc_work_order">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>2</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">33a86968dbf12010e2620181ca961994</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Form Simple List">5bc8ba84db57b70094ea6693ca96199d</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:04:58</sys_created_on>
+        <sys_id>3ba86968dbf12010e2620181ca961997</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Active Work Orders</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_3ba86968dbf12010e2620181ca961997</sys_update_name>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 17:07:02</sys_updated_on>
+        <table>x_stave_sc_work_order</table>
+        <title>Active Work Orders</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"always_show": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"panel_body_height": {
+		"value": "",
+		"displayValue": ""
+	},
+	"image_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "short_description,state,type",
+		"displayValue": "short_description,state,type"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "0be14209db433340f99a41deaa96196a",
+		"displayValue": "stv_sc_work_order_list"
+	},
+	"hide_footer": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"reference_field": {
+		"value": "asset",
+		"displayValue": "asset"
+	},
+	"reference_value": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=3ba86968dbf12010e2620181ca961997"/>
+</record_update>

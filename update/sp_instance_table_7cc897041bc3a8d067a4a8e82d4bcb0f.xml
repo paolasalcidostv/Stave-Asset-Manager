@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter table="sc_request">sys_idINjavascript:new x_stave_sc.TransferOrder().getTransferableRequests()<item endquery="false" field="sys_id" goto="false" newquery="false" operator="IN" or="false" value="javascript:new x_stave_sc.TransferOrder().getTransferableRequests()"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">cd4396721b9ea890348b4113cc4bcb04</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Stave List">886cfaee1bd11090f290997fbd4bcb83</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-17 22:16:11</sys_created_on>
+        <sys_id>7cc897041bc3a8d067a4a8e82d4bcb0f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_7cc897041bc3a8d067a4a8e82d4bcb0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-17 22:22:15</sys_updated_on>
+        <table>sc_request</table>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_personalize": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_new": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"target_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"is_embedded": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"open_records_in_modal": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=7cc897041bc3a8d067a4a8e82d4bcb0f"/>
+</record_update>

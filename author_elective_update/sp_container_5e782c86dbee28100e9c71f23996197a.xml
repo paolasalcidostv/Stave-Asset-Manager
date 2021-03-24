@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Asset Manager Dashboard - Container 4</name>
+        <order>4</order>
+        <sp_page display_value="stv_sc_asset_manager_dashboard">b0b3588edb6e28100e9c71f23996194e</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-02-26 18:02:24</sys_created_on>
+        <sys_id>5e782c86dbee28100e9c71f23996197a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Asset Manager Dashboard - Container 4</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_container_5e782c86dbee28100e9c71f23996197a</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 23:17:35</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_container_5e782c86dbee28100e9c71f23996197a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Asset Manager Dashboard - Container 4</name><order>4</order><sp_page display_value="stv_sc_asset_manager_dashboard">b0b3588edb6e28100e9c71f23996194e</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>jason.garcia</sys_created_by><sys_created_on>2021-02-26 18:02:24</sys_created_on><sys_id>5e782c86dbee28100e9c71f23996197a</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Asset Manager Dashboard - Container 4</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_container_5e782c86dbee28100e9c71f23996197a</sys_update_name><sys_updated_by>jason.garcia</sys_updated_by><sys_updated_on>2021-03-03 23:17:35</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1373111896</payload_hash>
+        <record_name>Asset Manager Dashboard - Container 4</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 23:17:35</sys_created_on>
+        <sys_id>bf80e7a31ba2289067a4a8e82d4bcb6b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177fa61e50b0000001</sys_recorded_at>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 23:17:35</sys_updated_on>
+        <type>Container</type>
+        <update_guid>7780e7a3d3a22890edec95df9335a86b</update_guid>
+        <update_guid_history>7780e7a3d3a22890edec95df9335a86b:-1373111896,00db49933b66a4907b01581532396b83:-1612988921,92782c86efee281082e077a2e1ff617c:-1852865946</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">8506a32f1ba2289067a4a8e82d4bcb21</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 23:41:25</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>91196d83d9ba4875a25b4da7a5b37091</sys_id>
+        <sys_metadata>5e782c86dbee28100e9c71f23996197a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset Manager Dashboard - Container 4</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_container_5e782c86dbee28100e9c71f23996197a</sys_update_name>
+        <sys_update_version display_value="sp_container_5e782c86dbee28100e9c71f23996197a">bf80e7a31ba2289067a4a8e82d4bcb6b</sys_update_version>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 23:41:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

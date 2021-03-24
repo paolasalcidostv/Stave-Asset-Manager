@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">5954bc091b2a685067a4a8e82d4bcb05</sp_column>
+        <sp_widget display_value="Typeahead Search">fa20ec02cb31020000f8d856634c9ce9</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>ilse.hernandez</sys_created_by>
+        <sys_created_on>2021-02-23 16:20:19</sys_created_on>
+        <sys_id>e554bc091b2a685067a4a8e82d4bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_e554bc091b2a685067a4a8e82d4bcb07</sys_update_name>
+        <sys_updated_by>ilse.hernandez</sys_updated_by>
+        <sys_updated_on>2021-02-23 16:20:19</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=e554bc091b2a685067a4a8e82d4bcb07"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_instance_e554bc091b2a685067a4a8e82d4bcb07</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="2">5954bc091b2a685067a4a8e82d4bcb05</sp_column><sp_widget display_value="Typeahead Search">fa20ec02cb31020000f8d856634c9ce9</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>ilse.hernandez</sys_created_by><sys_created_on>2021-02-23 16:20:19</sys_created_on><sys_id>e554bc091b2a685067a4a8e82d4bcb07</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_instance_e554bc091b2a685067a4a8e82d4bcb07</sys_update_name><sys_updated_by>ilse.hernandez</sys_updated_by><sys_updated_on>2021-02-23 16:20:19</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=e554bc091b2a685067a4a8e82d4bcb07"/></record_update>]]></payload>
+        <payload_hash>641335696</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>d641bcff1b7de0d067a4a8e82d4bcbfd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ilse.hernandez</sys_created_by>
+        <sys_created_on>2021-02-23 16:20:19</sys_created_on>
+        <sys_id>2554bc091b2a685067a4a8e82d4bcb09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177cfb0feb30000001</sys_recorded_at>
+        <sys_updated_by>ilse.hernandez</sys_updated_by>
+        <sys_updated_on>2021-02-23 16:20:19</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>2d54bc091b2a68505046380f23744308</update_guid>
+        <update_guid_history>2d54bc091b2a68505046380f23744308:641335696</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">b627784d1b2a685067a4a8e82d4bcb37</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ilse.hernandez</sys_created_by>
+        <sys_created_on>2021-02-23 16:32:42</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>4985afa970fe4e7da5642141436c6901</sys_id>
+        <sys_metadata>e554bc091b2a685067a4a8e82d4bcb07</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_e554bc091b2a685067a4a8e82d4bcb07</sys_update_name>
+        <sys_update_version display_value="sp_instance_e554bc091b2a685067a4a8e82d4bcb07">2554bc091b2a685067a4a8e82d4bcb09</sys_update_version>
+        <sys_updated_by>ilse.hernandez</sys_updated_by>
+        <sys_updated_on>2021-02-23 16:32:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

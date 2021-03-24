@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name>tab-container usage</class_name>
+        <container_class_name/>
+        <name>Copy of Asset (1) - Container 12</name>
+        <order>12</order>
+        <sp_page display_value="copy_of_stv_sc_asset_1">635f3cf51bbdac901784fd9c0a4bcb9e</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>carlos.ventura</sys_created_by>
+        <sys_created_on>2021-01-19 18:16:54</sys_created_on>
+        <sys_id>cc6f30391bbdac901784fd9c0a4bcb1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Asset (1) - Container 12</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_container_cc6f30391bbdac901784fd9c0a4bcb1a</sys_update_name>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 18:16:54</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>60ffef56db558cd0f492c597059619d5</instance_id>
+        <instance_name>staveincdemo8</instance_name>
+        <name>sp_container_cc6f30391bbdac901784fd9c0a4bcb1a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name>tab-container usage</class_name><container_class_name/><name>Copy of Asset (1) - Container 12</name><order>12</order><sp_page display_value="copy_of_stv_sc_asset_1">635f3cf51bbdac901784fd9c0a4bcb9e</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>carlos.ventura</sys_created_by><sys_created_on>2021-01-19 18:16:54</sys_created_on><sys_id>cc6f30391bbdac901784fd9c0a4bcb1a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Copy of Asset (1) - Container 12</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_container_cc6f30391bbdac901784fd9c0a4bcb1a</sys_update_name><sys_updated_by>carlos.ventura</sys_updated_by><sys_updated_on>2021-01-19 18:16:54</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>2093227139</payload_hash>
+        <record_name>Copy of Asset (1) - Container 12</record_name>
+        <reverted_from/>
+        <source>845dcd211b3d2c900a2863142a4bcbc6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>carlos.ventura</sys_created_by>
+        <sys_created_on>2021-01-19 18:16:54</sys_created_on>
+        <sys_id>086f30391bbdac901784fd9c0a4bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1771bdd27350000001</sys_recorded_at>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 18:16:54</sys_updated_on>
+        <type>Container</type>
+        <update_guid>406f303957bdac905426c94b31fee01c</update_guid>
+        <update_guid_history>406f303957bdac905426c94b31fee01c:2093227139</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">1a83c53d1bbdac901784fd9c0a4bcb9a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>carlos.ventura</sys_created_by>
+        <sys_created_on>2021-01-19 18:35:04</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>3ffe115da3ff4c1895e1bc5f92aaf029</sys_id>
+        <sys_metadata>cc6f30391bbdac901784fd9c0a4bcb1a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Asset (1) - Container 12</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_container_cc6f30391bbdac901784fd9c0a4bcb1a</sys_update_name>
+        <sys_update_version display_value="sp_container_cc6f30391bbdac901784fd9c0a4bcb1a">086f30391bbdac901784fd9c0a4bcb1c</sys_update_version>
+        <sys_updated_by>carlos.ventura</sys_updated_by>
+        <sys_updated_on>2021-01-19 18:35:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

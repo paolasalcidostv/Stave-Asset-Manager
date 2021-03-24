@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>2</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">27a86968dbf12010e2620181ca961984</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Form Info Test">f2e1606d1b392c900a2863142a4bcbdb</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-18 21:32:22</sys_created_on>
+        <sys_id>ed82e8ed1b392c900a2863142a4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_ed82e8ed1b392c900a2863142a4bcbb0</sys_update_name>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-18 21:32:22</sys_updated_on>
+        <table/>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=ed82e8ed1b392c900a2863142a4bcbb0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>60ffef56db558cd0f492c597059619d5</instance_id>
+        <instance_name>staveincdemo8</instance_name>
+        <name>sp_instance_vlist_ed82e8ed1b392c900a2863142a4bcbb0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist"><sp_instance_vlist action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><display_field/><field_list/><filter/><glyph/><id/><maximum_entries>5</maximum_entries><order>2</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="1">27a86968dbf12010e2620181ca961984</sp_column><sp_page/><sp_widget display_value="Form Info Test">f2e1606d1b392c900a2863142a4bcbdb</sp_widget><sys_class_name>sp_instance_vlist</sys_class_name><sys_created_by>bryan.Villa</sys_created_by><sys_created_on>2021-01-18 21:32:22</sys_created_on><sys_id>ed82e8ed1b392c900a2863142a4bcbb0</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_instance_vlist_ed82e8ed1b392c900a2863142a4bcbb0</sys_update_name><sys_updated_by>bryan.Villa</sys_updated_by><sys_updated_on>2021-01-18 21:32:22</sys_updated_on><table/><title/><url/><widget_parameters/></sp_instance_vlist><sys_translated_text action="delete_multiple" query="documentkey=ed82e8ed1b392c900a2863142a4bcbb0"/></record_update>]]></payload>
+        <payload_hash>341535166</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b14d1b151b712c900a2863142a4bcbf7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-18 21:32:22</sys_created_on>
+        <sys_id>ed82e8ed1b392c900a2863142a4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1771769bfba0000001</sys_recorded_at>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-18 21:32:22</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>e582e8ed0b392c908784d55b470642b4</update_guid>
+        <update_guid_history>e582e8ed0b392c908784d55b470642b4:341535166</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d613a8611b792c900a2863142a4bcbf9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-18 21:34:52</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>1906adf193334d459fdfbf96ea591bb9</sys_id>
+        <sys_metadata>ed82e8ed1b392c900a2863142a4bcbb0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_ed82e8ed1b392c900a2863142a4bcbb0</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_ed82e8ed1b392c900a2863142a4bcbb0">ed82e8ed1b392c900a2863142a4bcbb4</sys_update_version>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-18 21:34:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

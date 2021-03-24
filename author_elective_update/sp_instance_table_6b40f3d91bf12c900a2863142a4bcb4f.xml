@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>acquisition_method</display_field>
+        <field_list>asset_tag,model_category,display_name,assigned_to,company,install_status,substatus,cost,ci</field_list>
+        <filter table="alm_asset">install_statusNOT IN7,8^install_status=6^EQ<item display_value="7,8" endquery="false" field="install_status" goto="false" newquery="false" operator="NOT IN" or="false" value="7,8"/>
+            <item display_value="In stock" endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="6"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>20</maximum_entries>
+        <order>2</order>
+        <order_by>sys_created_on</order_by>
+        <order_direction>desc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">2cb8a968dbf12010e2620181ca9619ab</sp_column>
+        <sp_page/>
+        <sp_widget display_value="stv Custom List Data Table ">886cfaee1bd11090f290997fbd4bcb83</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-18 17:52:57</sys_created_on>
+        <sys_id>6b40f3d91bf12c900a2863142a4bcb4f</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Assets</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_6b40f3d91bf12c900a2863142a4bcb4f</sys_update_name>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-21 20:02:30</sys_updated_on>
+        <table>alm_asset</table>
+        <title>Assets</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_personalize": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_new": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_keywords": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"filter_by_range": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"target_page": {
+		"value": "stv_sc_asset",
+		"displayValue": "stv_sc_asset"
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=6b40f3d91bf12c900a2863142a4bcb4f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>60ffef56db558cd0f492c597059619d5</instance_id>
+        <instance_name>staveincdemo8</instance_name>
+        <name>sp_instance_table_6b40f3d91bf12c900a2863142a4bcb4f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_table"&gt;&lt;sp_instance_table action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field&gt;acquisition_method&lt;/display_field&gt;&lt;field_list&gt;asset_tag,model_category,display_name,assigned_to,company,install_status,substatus,cost,ci&lt;/field_list&gt;&lt;filter table="alm_asset"&gt;install_statusNOT IN7,8^install_status=6^EQ&lt;item display_value="7,8" endquery="false" field="install_status" goto="false" newquery="false" operator="NOT IN" or="false" value="7,8"/&gt;&lt;item display_value="In stock" endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="6"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;maximum_entries&gt;20&lt;/maximum_entries&gt;&lt;order&gt;2&lt;/order&gt;&lt;order_by&gt;sys_created_on&lt;/order_by&gt;&lt;order_direction&gt;desc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;2cb8a968dbf12010e2620181ca9619ab&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="stv Custom List Data Table "&gt;886cfaee1bd11090f290997fbd4bcb83&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_table&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bryan.Villa&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-18 17:52:57&lt;/sys_created_on&gt;&lt;sys_id&gt;6b40f3d91bf12c900a2863142a4bcb4f&lt;/sys_id&gt;&lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;&lt;sys_name&gt;Assets&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_table_6b40f3d91bf12c900a2863142a4bcb4f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bryan.Villa&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-21 20:02:30&lt;/sys_updated_on&gt;&lt;table&gt;alm_asset&lt;/table&gt;&lt;title&gt;Assets&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_personalize": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_new": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_keywords": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"filter_by_range": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"target_page": {
+		"value": "stv_sc_asset",
+		"displayValue": "stv_sc_asset"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_table&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=6b40f3d91bf12c900a2863142a4bcb4f"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1635008601</payload_hash>
+        <record_name>Assets</record_name>
+        <reverted_from/>
+        <source>845dcd211b3d2c900a2863142a4bcbc6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-21 20:02:30</sys_created_on>
+        <sys_id>2abaa75a1b7560d01784fd9c0a4bcbf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177268a8e650000001</sys_recorded_at>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-21 20:02:30</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>62baa75a287560d0e21b043079e735f2</update_guid>
+        <update_guid_history>62baa75a287560d0e21b043079e735f2:1635008601,5b37a396647560d00b8feaf486319dc4:-167675910,6127ef56677560d03653d72935180ec0:1724891408,1d4d531e823560d092f370819bfeb569:-167675910,09f68b1a99f160d09fd989749a503e8a:623979924,5b86831ab4f160d04d0939f1f9cd7cf1:-1387958032,0776431a2ef160d0b574907b8eda7751:1199379788,eeee4f4a9efdac90466edde65c125921:-944977176,39ce0b4a34fdac90a0e38351381294c1:-1035935575,cbd12682647dac9003f5258d0c70d98b:-944977176,aec162827c7dac90819e9a2ef3cfd616:1342668286,a7212a428a7dac900653712cf6133401:-944977176,fa38d275f135ec90ad5598caebf91fc8:902929498,4b654ca1cbb52c902e5e43850cb1d78f:2097926954,99550ca133b52c902c7d8bfa84bcec18:-425298504,93d97f95ed752c90a6568b3eaa5ff4f6:2097926954,3899f79566752c9015d6318c852a9241:586251435,7e88375548752c901f62957ff2d2ae18:-8419135,5da7f315a5752c902754115e78617fb5:-233001920,b1d5bbdd02352c90e4c6587338d70196:-609327410,d211bbd15a352c90a432c8a46be8114c:-233001920,e5a0b75d16f12c9048d2f53a1af59a54:-1911689477,6740f3d97af12c90625e3dc9c1324654:-700362357</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d0dae75a1b7560d01784fd9c0a4bcbc6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-21 20:02:54</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>6601b667cd694d5f838cef1ea47f9979</sys_id>
+        <sys_metadata>6b40f3d91bf12c900a2863142a4bcb4f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assets</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_table_6b40f3d91bf12c900a2863142a4bcb4f</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_6b40f3d91bf12c900a2863142a4bcb4f">2abaa75a1b7560d01784fd9c0a4bcbf2</sys_update_version>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-21 20:02:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>display_name,x_stave_fm_de_commission_work_order_request,assigned_to,retired,x_stave_fm_decommissioning_state,x_stave_fm_commissioning_state</field_list>
+        <filter table="alm_asset">x_stave_fm_decommissioning_state=0^retirement_date&lt;javascript:gs.beginningOfToday()<item endquery="false" field="retirement_date" goto="false" newquery="false" operator="&lt;" or="false" value="javascript:gs.beginningOfToday()"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>2</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8db82d68dbf12010e2620181ca961910</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Stave List">886cfaee1bd11090f290997fbd4bcb83</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:05:03</sys_created_on>
+        <sys_id>0db82d68dbf12010e2620181ca961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assets Past their Decommissioning Date</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_0db82d68dbf12010e2620181ca961920</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:05:03</sys_updated_on>
+        <table>alm_asset</table>
+        <title>Assets Past their Decommissioning Date</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_personalize": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_new": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=0db82d68dbf12010e2620181ca961920"/>
+</record_update>

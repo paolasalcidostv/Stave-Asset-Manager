@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>display_name,x_stave_fm_commission_work_order_request,x_stave_fm_commissioning_state,x_stave_fm_decommissioning_state,model,model_category,retired</field_list>
+        <filter table="alm_asset">x_stave_fm_decommissioning_state=1^retirement_dateONLast 60 days@javascript:gs.beginningOfLast60Days()@javascript:gs.endOfLast60Days()<item endquery="false" field="retirement_date" goto="false" newquery="false" operator="ON" or="false" value="Last 60 days@javascript:gs.beginningOfLast60Days()@javascript:gs.endOfLast60Days()"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8db82d68dbf12010e2620181ca961910</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Stave List">886cfaee1bd11090f290997fbd4bcb83</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:05:03</sys_created_on>
+        <sys_id>cdb82d68dbf12010e2620181ca96191e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assets Scheduled for Decommissioning on the last 60 days</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_cdb82d68dbf12010e2620181ca96191e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:05:03</sys_updated_on>
+        <table>alm_asset</table>
+        <title>Assets Scheduled for Decommissioning on the last 60 days</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_personalize": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_new": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=cdb82d68dbf12010e2620181ca96191e"/>
+</record_update>

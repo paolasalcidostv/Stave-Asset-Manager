@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	$scope.$on('data_table.click', function(e, parms){
+		var p = $scope.data.page_id || 'form';
+		var s = {id: p, table: parms.table, sys_id: parms.sys_id, view: c.data.view, referringUrl: parms.referringUrl, refVal: parms.refVal};
+		var newURL = $location.search(s);
+		spAriaFocusManager.navigateToLink(newURL.url());
+	});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,filter,field_list,maximum_entries,order_by,order_direction,title,color,glyph,sp_page,roles</field_list>
+        <has_preview>false</has_preview>
+        <id>stv-sc-asset-list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Asset List</name>
+        <option_schema>[{"name":"show_export","section":"other","default_value":"false","label":"Show Export","type":"boolean"},{"name":"show_breadcrumbs","section":"other","default_value":"false","label":"Show Breadcrumbs","type":"boolean"},{"name":"show_personalize","section":"other","label":"Show Personalize Button","type":"boolean"},{"name":"show_new","section":"other","label":"Show New Button","type":"boolean"},{"name":"show_keywords","section":"other","default_value":"false","label":"Show Keywords","type":"boolean"},{"name":"filter_by_range","section":"other","label":"Filter By Range","type":"boolean"},{"name":"default_range","section":"other","label":"Default range","type":"choice","choices":[{"label":"Today","value":"Today"},{"label":"Week","value":"Week"},{"label":"Month","value":"Month"},{"label":"Quarter","value":"Quarter"},{"label":"Year","value":"Year"},{"label":"Range","value":"Range"}]},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	$sp.getValues(data);
+	if(!data.table)
+		{
+			data.table = $sp.getParameter('table') || $sp.getParameter('t') ||(input ? input.table : '' );
+		}
+	data.o = data.o || $sp.getParameter('o')  || $sp.getValue('order_by') || "sys_created_on" ;
+	data.d = data.d || $sp.getParameter('d')  || $sp.getValue('order_direction') || "desc";
+	data.filter = $sp.getValue("filter") || $sp.getParameter('filter') || (input ? input.filter : '');
+	data.view = $sp.getParameter('view') || 'Custom';
+	if($sp.getParameter('filter')&& data.filter != $sp.getParameter('filter')){
+		data.filter = data.filter+'^'+$sp.getParameter('filter');
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-28 19:48:28</sys_created_on>
+        <sys_id>cdaa6fa01b0a68d0b521a9722a4bcb22</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Asset List</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_widget_cdaa6fa01b0a68d0b521a9722a4bcb22</sys_update_name>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-28 19:48:52</sys_updated_on>
+        <template><![CDATA[<div>
+  
+	<widget id="stv_custom_list_data_table" options="data.options" ></widget>
+	
+</div>
+]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_widget_cdaa6fa01b0a68d0b521a9722a4bcb22</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	$scope.$on('data_table.click', function(e, parms){
+		var p = $scope.data.page_id || 'form';
+		var s = {id: p, table: parms.table, sys_id: parms.sys_id, view: c.data.view, referringUrl: parms.referringUrl, refVal: parms.refVal};
+		var newURL = $location.search(s);
+		spAriaFocusManager.navigateToLink(newURL.url());
+	});
+	
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance_table&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;table,filter,field_list,maximum_entries,order_by,order_direction,title,color,glyph,sp_page,roles&lt;/field_list&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;stv-sc-asset-list&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Asset List&lt;/name&gt;&lt;option_schema&gt;[{"name":"show_export","section":"other","default_value":"false","label":"Show Export","type":"boolean"},{"name":"show_breadcrumbs","section":"other","default_value":"false","label":"Show Breadcrumbs","type":"boolean"},{"name":"show_personalize","section":"other","label":"Show Personalize Button","type":"boolean"},{"name":"show_new","section":"other","label":"Show New Button","type":"boolean"},{"name":"show_keywords","section":"other","default_value":"false","label":"Show Keywords","type":"boolean"},{"name":"filter_by_range","section":"other","label":"Filter By Range","type":"boolean"},{"name":"default_range","section":"other","label":"Default range","type":"choice","choices":[{"label":"Today","value":"Today"},{"label":"Week","value":"Week"},{"label":"Month","value":"Month"},{"label":"Quarter","value":"Quarter"},{"label":"Year","value":"Year"},{"label":"Range","value":"Range"}]},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	$sp.getValues(data);
+	if(!data.table)
+		{
+			data.table = $sp.getParameter('table') || $sp.getParameter('t') ||(input ? input.table : '' );
+		}
+	data.o = data.o || $sp.getParameter('o')  || $sp.getValue('order_by') || "sys_created_on" ;
+	data.d = data.d || $sp.getParameter('d')  || $sp.getValue('order_direction') || "desc";
+	data.filter = $sp.getValue("filter") || $sp.getParameter('filter') || (input ? input.filter : '');
+	data.view = $sp.getParameter('view') || 'Custom';
+	if($sp.getParameter('filter')&amp;&amp; data.filter != $sp.getParameter('filter')){
+		data.filter = data.filter+'^'+$sp.getParameter('filter');
+	}
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bryan.Villa&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-28 19:48:28&lt;/sys_created_on&gt;&lt;sys_id&gt;cdaa6fa01b0a68d0b521a9722a4bcb22&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Asset List&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_cdaa6fa01b0a68d0b521a9722a4bcb22&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bryan.Villa&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-28 19:48:52&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div&gt;
+  
+	&lt;widget id="stv_custom_list_data_table" options="data.options" &gt;&lt;/widget&gt;
+	
+&lt;/div&gt;
+]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1150713911</payload_hash>
+        <record_name>Asset List</record_name>
+        <reverted_from/>
+        <source>3ae03cff1b7de0d067a4a8e82d4bcb9d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-28 19:48:52</sys_created_on>
+        <sys_id>0bbaefa01b0a68d0b521a9722a4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1774a8a952d0000001</sys_recorded_at>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-28 19:48:52</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>cfbaefa0420a68d0efeb6bc960fd1020</update_guid>
+        <update_guid_history>cfbaefa0420a68d0efeb6bc960fd1020:-1150713911,81aa6fa0510a68d06e44864a0d13a324:-1538405551</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d24bafe01b0a68d0b521a9722a4bcbbf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-28 19:51:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>5429d9f908744f27bbc527b29998f501</sys_id>
+        <sys_metadata>cdaa6fa01b0a68d0b521a9722a4bcb22</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset List</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_widget_cdaa6fa01b0a68d0b521a9722a4bcb22</sys_update_name>
+        <sys_update_version display_value="sp_widget_cdaa6fa01b0a68d0b521a9722a4bcb22">0bbaefa01b0a68d0b521a9722a4bcb21</sys_update_version>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-28 19:51:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

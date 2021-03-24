@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget">
+    <m2m_sp_ng_pro_sp_widget action="DELETE">
+        <sp_angular_provider display_value="optionalClick">120acdeddb40609094ea6693ca9619f6</sp_angular_provider>
+        <sp_widget display_value="Icon With Count 2">e5dea66f1b6ee49067a4a8e82d4bcbb1</sp_widget>
+        <sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:40:21</sys_created_on>
+        <sys_id>61dea66f1b6ee49067a4a8e82d4bcbb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>optionalClick.Icon With Count 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_61dea66f1b6ee49067a4a8e82d4bcbb7</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:40:21</sys_updated_on>
+    </m2m_sp_ng_pro_sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>m2m_sp_ng_pro_sp_widget_61dea66f1b6ee49067a4a8e82d4bcbb7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_ng_pro_sp_widget"><m2m_sp_ng_pro_sp_widget action="INSERT_OR_UPDATE"><sp_angular_provider display_value="optionalClick">120acdeddb40609094ea6693ca9619f6</sp_angular_provider><sp_widget display_value="Icon With Count 2">e5dea66f1b6ee49067a4a8e82d4bcbb1</sp_widget><sys_class_name>m2m_sp_ng_pro_sp_widget</sys_class_name><sys_created_by>jason.garcia</sys_created_by><sys_created_on>2021-03-03 19:40:21</sys_created_on><sys_id>61dea66f1b6ee49067a4a8e82d4bcbb7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>optionalClick.Icon With Count 2</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>m2m_sp_ng_pro_sp_widget_61dea66f1b6ee49067a4a8e82d4bcbb7</sys_update_name><sys_updated_by>jason.garcia</sys_updated_by><sys_updated_on>2021-03-03 19:40:21</sys_updated_on></m2m_sp_ng_pro_sp_widget></record_update>]]></payload>
+        <payload_hash>-14928674</payload_hash>
+        <record_name>optionalClick.Icon With Count 2</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:40:21</sys_created_on>
+        <sys_id>25dea66f1b6ee49067a4a8e82d4bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177f99b016c0000001</sys_recorded_at>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:40:21</sys_updated_on>
+        <type>Angular Providers</type>
+        <update_guid>2ddea66f9e6ee490c46449e628e661b8</update_guid>
+        <update_guid_history>2ddea66f9e6ee490c46449e628e661b8:-14928674</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">fc1fee6f1b6ee49067a4a8e82d4bcbb4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:41:23</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_ng_pro_sp_widget">m2m_sp_ng_pro_sp_widget</sys_db_object>
+        <sys_id>0adcda9321d347928117818af64d9724</sys_id>
+        <sys_metadata>61dea66f1b6ee49067a4a8e82d4bcbb7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>optionalClick.Icon With Count 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>m2m_sp_ng_pro_sp_widget_61dea66f1b6ee49067a4a8e82d4bcbb7</sys_update_name>
+        <sys_update_version display_value="m2m_sp_ng_pro_sp_widget_61dea66f1b6ee49067a4a8e82d4bcbb7">25dea66f1b6ee49067a4a8e82d4bcbb9</sys_update_version>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:41:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

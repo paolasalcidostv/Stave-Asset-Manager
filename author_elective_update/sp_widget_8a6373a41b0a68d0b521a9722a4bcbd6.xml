@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>stv_sc_asset_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Asset List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	/*data.table = $sp.getParameter('table');
+	data.sys_id = $sp.getParameter('sys_id');
+	data.target_page_id = $sp.getParameter('target_page_id') || '';
+	data.view = $sp.getParameter('view') || '';*/
+	data = {
+		"active": true,
+		"color": "default",
+		"filter": "install_statusNOT IN7,8^intall_status=6^EQ",
+		"maximum_entries": 20,
+		"order": 1,
+		"order_direction": "desc",
+		"size": "md",
+		"sp_column": "2cb8a968dbf12010e2620181ca9619ab",
+		"sp_widget": "886cfaee1bd11090f290997fbd4bcb83",
+		"sys_class_name": "sp_instance_table",
+		"sys_name": "Stave Supply",
+		"sys_package": "53f715ecdbf568d0f24c5e25ca9619b7",
+		"sys_policy": "",
+		"sys_scope": "53f715ecdbf568d0f24c5e25ca9619b7",
+		"sys_tags": "",
+		"sys_update_name": "sp_instance_table_f3ea6b5a1b7560d01784fd9c0a4bcb19",
+		"title": "Stave Supply",
+		"widget_parameters": { "show_export": { "value": "false", "displayValue": "false" }, "show_breadcrumbs": { "value": "false", "displayValue": "false" }, "show_personalize": { "value": "true", "displayValue": "true" }, "show_new": { "value": "", "displayValue": "" }, "show_keywords": { "value": "true", "displayValue": "true" }, "filter_by_range": { "value": "", "displayValue": "" }, "default_range": { "value": "", "displayValue": "" }, "target_page": { "value": "stv_sc_asset", "displayValue": "stv_sc_asset" } }
+	};
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-28 20:30:38</sys_created_on>
+        <sys_id>8a6373a41b0a68d0b521a9722a4bcbd6</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Asset List</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_widget_8a6373a41b0a68d0b521a9722a4bcbd6</sys_update_name>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-28 21:15:21</sys_updated_on>
+        <template><![CDATA[<widget id="stv_custom_list_data_table" options="data"data="data"></widget>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_widget_8a6373a41b0a68d0b521a9722a4bcbd6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;stv_sc_asset_list&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Asset List&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	/*data.table = $sp.getParameter('table');
+	data.sys_id = $sp.getParameter('sys_id');
+	data.target_page_id = $sp.getParameter('target_page_id') || '';
+	data.view = $sp.getParameter('view') || '';*/
+	data = {
+		"active": true,
+		"color": "default",
+		"filter": "install_statusNOT IN7,8^intall_status=6^EQ",
+		"maximum_entries": 20,
+		"order": 1,
+		"order_direction": "desc",
+		"size": "md",
+		"sp_column": "2cb8a968dbf12010e2620181ca9619ab",
+		"sp_widget": "886cfaee1bd11090f290997fbd4bcb83",
+		"sys_class_name": "sp_instance_table",
+		"sys_name": "Stave Supply",
+		"sys_package": "53f715ecdbf568d0f24c5e25ca9619b7",
+		"sys_policy": "",
+		"sys_scope": "53f715ecdbf568d0f24c5e25ca9619b7",
+		"sys_tags": "",
+		"sys_update_name": "sp_instance_table_f3ea6b5a1b7560d01784fd9c0a4bcb19",
+		"title": "Stave Supply",
+		"widget_parameters": { "show_export": { "value": "false", "displayValue": "false" }, "show_breadcrumbs": { "value": "false", "displayValue": "false" }, "show_personalize": { "value": "true", "displayValue": "true" }, "show_new": { "value": "", "displayValue": "" }, "show_keywords": { "value": "true", "displayValue": "true" }, "filter_by_range": { "value": "", "displayValue": "" }, "default_range": { "value": "", "displayValue": "" }, "target_page": { "value": "stv_sc_asset", "displayValue": "stv_sc_asset" } }
+	};
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;bryan.Villa&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-28 20:30:38&lt;/sys_created_on&gt;&lt;sys_id&gt;8a6373a41b0a68d0b521a9722a4bcbd6&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Asset List&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_8a6373a41b0a68d0b521a9722a4bcbd6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;bryan.Villa&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-28 21:15:21&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;widget id="stv_custom_list_data_table" options="data"data="data"&gt;&lt;/widget&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1197173898</payload_hash>
+        <record_name>Asset List</record_name>
+        <reverted_from/>
+        <source>3ae03cff1b7de0d067a4a8e82d4bcb9d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-28 21:15:21</sys_created_on>
+        <sys_id>068eb7a81b4a68d0b521a9722a4bcba9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1774ad9c51c0000001</sys_recorded_at>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-28 21:15:21</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>ca8eb7a8c74a68d0e411e6e8314530a8</update_guid>
+        <update_guid_history>ca8eb7a8c74a68d0e411e6e8314530a8:1197173898,c96e33a8e04a68d0ff82b98bea2ace84:1353040104,985e3b68884a68d06a7ac36c35e49ad2:733978115,37ad3728ae4a68d04a1196c2e4a40ca1:-787138243,600abfa0074a68d070da6e47912ad971:733978115,03b9f7a01c4a68d0b8ef2c4ba52d4133:895765455,5a59bf20004a68d07fd8a49a6d4b308e:-1223414951,d248b320cf4a68d0f98d4d07584fd8ee:259712512,56f6f3ec610a68d0b04b359ebeb16e81:-829519997,d66677ac7a0a68d08f1a39d1799e0c48:1441135441,9645376c390a68d00ac1dbca8b0c28b5:-120053480,488477e8e50a68d05e355e64012d697d:1302764924,36443fe46b0a68d04beff7888f89a8c9:-1482403474</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">b19858b41bca68d0b521a9722a4bcb48</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>bryan.Villa</sys_created_by>
+        <sys_created_on>2021-01-28 23:09:13</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>18fdccc5b5c8450c83ad56e085b71e44</sys_id>
+        <sys_metadata>8a6373a41b0a68d0b521a9722a4bcbd6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Asset List</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_widget_8a6373a41b0a68d0b521a9722a4bcbd6</sys_update_name>
+        <sys_update_version display_value="sp_widget_8a6373a41b0a68d0b521a9722a4bcbd6">068eb7a81b4a68d0b521a9722a4bcba9</sys_update_version>
+        <sys_updated_by>bryan.Villa</sys_updated_by>
+        <sys_updated_on>2021-01-28 23:09:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

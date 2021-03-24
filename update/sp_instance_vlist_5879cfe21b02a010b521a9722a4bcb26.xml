@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>number,stage,from_stockroom,to_stockroom,from_location,to_location,requested_date,delivery_by_date,drop_off,delivery_method</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">15def9621bca6010b521a9722a4bcb67</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Stave Form">e9146a9ddbd2b34094ea6693ca961905</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>ilse.hernandez</sys_created_by>
+        <sys_created_on>2021-02-03 22:31:16</sys_created_on>
+        <sys_id>5879cfe21b02a010b521a9722a4bcb26</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Summary</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_5879cfe21b02a010b521a9722a4bcb26</sys_update_name>
+        <sys_updated_by>ilse.hernandez</sys_updated_by>
+        <sys_updated_on>2021-02-03 22:37:33</sys_updated_on>
+        <table>x_stave_sc_transfer_order</table>
+        <title>Summary</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"field_list": {
+		"value": "number,stage,from_stockroom,to_stockroom,from_location,to_location,requested_date,delivery_by_date,drop_off,delivery_method",
+		"displayValue": "number,stage,from_stockroom,to_stockroom,from_location,to_location,requested_date,delivery_by_date,drop_off,delivery_method"
+	},
+	"title": {
+		"value": "Summary",
+		"displayValue": "Summary"
+	},
+	"header_field": {
+		"value": "request_state",
+		"displayValue": "request_state"
+	},
+	"image": {
+		"value": "",
+		"displayValue": ""
+	},
+	"bootstrap_column_size": {
+		"value": "6",
+		"displayValue": "6"
+	},
+	"assigned_to_field": {
+		"value": "requested_for",
+		"displayValue": "requested_for"
+	},
+	"show_empty_fields": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"section": {
+		"value": null,
+		"displayValue": ""
+	},
+	"form_view": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"help_text": {
+		"value": "",
+		"displayValue": ""
+	},
+	"help_text_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"clickable_referenced_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"service_portal_urls_table": {
+		"value": "",
+		"displayValue": ""
+	},
+	"translated_html": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=5879cfe21b02a010b521a9722a4bcb26"/>
+</record_update>

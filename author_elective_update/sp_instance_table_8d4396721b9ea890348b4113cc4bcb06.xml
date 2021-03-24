@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>number,short_description,approval</field_list>
+        <filter table="sc_request">sys_idINjavascript:new x_stave_sc.TransferOrder().getTransferableRequests()<item endquery="false" field="sys_id" goto="false" newquery="false" operator="IN" or="false" value="javascript:new x_stave_sc.TransferOrder().getTransferableRequests()"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by>number</order_by>
+        <order_direction>desc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">cd4396721b9ea890348b4113cc4bcb04</sp_column>
+        <sp_page display_value="sc_request">a44fd933d7230200a9addd173e24d4b3</sp_page>
+        <sp_widget display_value="STV Data Table from Instance Definition">583bb8901b6d9010f290997fbd4bcbf6</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-16 23:28:45</sys_created_on>
+        <sys_id>8d4396721b9ea890348b4113cc4bcb06</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Requests</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_8d4396721b9ea890348b4113cc4bcb06</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-17 22:08:29</sys_updated_on>
+        <table>sc_request</table>
+        <title>Requests</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=8d4396721b9ea890348b4113cc4bcb06"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_instance_table_8d4396721b9ea890348b4113cc4bcb06</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_table"&gt;&lt;sp_instance_table action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field/&gt;&lt;field_list&gt;number,short_description,approval&lt;/field_list&gt;&lt;filter table="sc_request"&gt;sys_idINjavascript:new x_stave_sc.TransferOrder().getTransferableRequests()&lt;item endquery="false" field="sys_id" goto="false" newquery="false" operator="IN" or="false" value="javascript:new x_stave_sc.TransferOrder().getTransferableRequests()"/&gt;&lt;/filter&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;maximum_entries&gt;5&lt;/maximum_entries&gt;&lt;order&gt;1&lt;/order&gt;&lt;order_by&gt;number&lt;/order_by&gt;&lt;order_direction&gt;desc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="2"&gt;cd4396721b9ea890348b4113cc4bcb04&lt;/sp_column&gt;&lt;sp_page display_value="sc_request"&gt;a44fd933d7230200a9addd173e24d4b3&lt;/sp_page&gt;&lt;sp_widget display_value="STV Data Table from Instance Definition"&gt;583bb8901b6d9010f290997fbd4bcbf6&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_table&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jonas.perusquia&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-02-16 23:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;8d4396721b9ea890348b4113cc4bcb06&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;Requests&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_table_8d4396721b9ea890348b4113cc4bcb06&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-17 22:08:29&lt;/sys_updated_on&gt;&lt;table&gt;sc_request&lt;/table&gt;&lt;title&gt;Requests&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_table&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8d4396721b9ea890348b4113cc4bcb06"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-391812586</payload_hash>
+        <record_name>Requests</record_name>
+        <reverted_from/>
+        <source>d641bcff1b7de0d067a4a8e82d4bcbfd</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-17 22:08:29</sys_created_on>
+        <sys_id>0c07d3401bc3a8d067a4a8e82d4bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178423baa7b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-17 22:08:29</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>0407d340eec3a8d032bfd39639ecf9e3</update_guid>
+        <update_guid_history>0407d340eec3a8d032bfd39639ecf9e3:-391812586,8a6bf018c93a6050d3fc00087899768e:332290159,374b30183e3a605045f031829eff81e4:1441398192,225f5efe74d6605078241fec4236ef29:332290159,9c4f5efe8ed66050087f47ef394c28bc:1526237811,b0fe9efe51d66050aa755d4a658e4978:-987663349,454396725f9ea890dcdf527ab7982b08:332290159</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">07f85b041bc3a8d067a4a8e82d4bcb7a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-17 22:17:09</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>0f869cdd974c4914b54e86f537c54951</sys_id>
+        <sys_metadata>8d4396721b9ea890348b4113cc4bcb06</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requests</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_table_8d4396721b9ea890348b4113cc4bcb06</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_8d4396721b9ea890348b4113cc4bcb06">0c07d3401bc3a8d067a4a8e82d4bcbe3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-17 22:17:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

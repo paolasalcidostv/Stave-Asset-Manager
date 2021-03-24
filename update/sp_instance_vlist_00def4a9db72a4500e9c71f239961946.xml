@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter table="alm_asset">retired&lt;javascript:gs.beginningOfToday()<item endquery="false" field="retired" goto="false" newquery="false" operator="&lt;" or="false" value="javascript:gs.beginningOfToday()"/>
+        </filter>
+        <glyph>times</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">6559a7631be2289067a4a8e82d4bcbb4</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Stave Card">d03de22edb71f30094ea6693ca961993</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-09 16:38:44</sys_created_on>
+        <sys_id>00def4a9db72a4500e9c71f239961946</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>EOL Assets</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_00def4a9db72a4500e9c71f239961946</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 16:40:35</sys_updated_on>
+        <table>alm_asset</table>
+        <title>EOL Assets</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"count_type": {
+		"value": "Sum",
+		"displayValue": "Sum"
+	},
+	"count_field": {
+		"value": "cost",
+		"displayValue": "cost"
+	},
+	"count_style": {
+		"value": "",
+		"displayValue": ""
+	},
+	"count_target": {
+		"value": "",
+		"displayValue": ""
+	},
+	"url": {
+		"value": "",
+		"displayValue": ""
+	},
+	"url_target": {
+		"value": "",
+		"displayValue": ""
+	},
+	"conditional_style": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"success_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"warning_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"danger_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"id_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"roles": {
+		"value": "",
+		"displayValue": ""
+	},
+	"average_to_substract": {
+		"value": "",
+		"displayValue": ""
+	},
+	"prefix": {
+		"value": "$",
+		"displayValue": "$"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"is_clickable": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "#689EB8",
+		"displayValue": "#689EB8"
+	},
+	"font_color": {
+		"value": "white",
+		"displayValue": "white"
+	},
+	"show_count": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=00def4a9db72a4500e9c71f239961946"/>
+</record_update>

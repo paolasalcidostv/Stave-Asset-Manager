@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="DELETE">
+        <directory>update</directory>
+        <documentkey>8cac29a81bb568900a2863142a4bcb5f</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_stave_sc_m2m_instances_menus">
+    <x_stave_sc_m2m_instances_menus action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application_module display_value="Asset Manager">b39b8fb6db1c24d0f24c5e25ca961938</application_module>
+        <instance_with_menu display_value="Work Order Management">0bcae9e8dbf12010e2620181ca9619ce</instance_with_menu>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:22:35</sys_created_on>
+        <sys_id>8cac29a81bb568900a2863142a4bcb5f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:23:02</sys_updated_on>
+    </x_stave_sc_m2m_instances_menus>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:24:13</sys_created_on>
+        <sys_id>b11dada81bb568900a2863142a4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2021-01-15 16:22:35</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sys_metadata_link_b11dada81bb568900a2863142a4bcbb2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:24:13</sys_updated_on>
+        <tablename>x_stave_sc_m2m_instances_menus</tablename>
+    </sys_metadata_link>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>60ffef56db558cd0f492c597059619d5</instance_id>
+        <instance_name>staveincdemo8</instance_name>
+        <name>sys_metadata_link_b11dada81bb568900a2863142a4bcbb2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_metadata_link"&gt;&lt;sys_metadata_link action="INSERT_OR_UPDATE"&gt;&lt;directory&gt;update&lt;/directory&gt;&lt;documentkey&gt;8cac29a81bb568900a2863142a4bcb5f&lt;/documentkey&gt;&lt;payload&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_stave_sc_m2m_instances_menus"&gt;
+    &lt;x_stave_sc_m2m_instances_menus action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;application_module display_value="Asset Manager"&gt;b39b8fb6db1c24d0f24c5e25ca961938&lt;/application_module&gt;
+        &lt;instance_with_menu display_value="Work Order Management"&gt;0bcae9e8dbf12010e2620181ca9619ce&lt;/instance_with_menu&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2021-01-16 00:22:35&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;8cac29a81bb568900a2863142a4bcb5f&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2021-01-16 00:23:02&lt;/sys_updated_on&gt;
+    &lt;/x_stave_sc_m2m_instances_menus&gt;
+&lt;/record_update&gt;
+]]&gt;&lt;/payload&gt;&lt;sys_class_name&gt;sys_metadata_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-16 00:24:13&lt;/sys_created_on&gt;&lt;sys_id&gt;b11dada81bb568900a2863142a4bcbb2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Created 2021-01-15 16:22:35&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_metadata_link_b11dada81bb568900a2863142a4bcbb2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-16 00:24:13&lt;/sys_updated_on&gt;&lt;tablename&gt;x_stave_sc_m2m_instances_menus&lt;/tablename&gt;&lt;/sys_metadata_link&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>84666022</payload_hash>
+        <record_name>Created 2021-01-15 16:22:35</record_name>
+        <reverted_from/>
+        <source>818e196c1b7568900a2863142a4bcba4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:24:13</sys_created_on>
+        <sys_id>b11dada81bb568900a2863142a4bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1770894028d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:24:13</sys_updated_on>
+        <type>Metadata Snapshot</type>
+        <update_guid>f91dada89cb568903821357ea174f5b2</update_guid>
+        <update_guid_history>f91dada89cb568903821357ea174f5b2:84666022</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:25:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_metadata_link">sys_metadata_link</sys_db_object>
+        <sys_id>4c75de7c490e415cb42fb40d75b9a710</sys_id>
+        <sys_metadata>b11dada81bb568900a2863142a4bcbb2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2021-01-15 16:22:35</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sys_metadata_link_b11dada81bb568900a2863142a4bcbb2</sys_update_name>
+        <sys_update_version display_value="sys_metadata_link_b11dada81bb568900a2863142a4bcbb2">b11dada81bb568900a2863142a4bcbb3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:25:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

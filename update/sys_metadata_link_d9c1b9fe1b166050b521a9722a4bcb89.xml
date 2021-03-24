@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>c2dbd97a1bd26050b521a9722a4bcbe9</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_stave_sc_portal_condition"&gt;
+    &lt;x_stave_sc_portal_condition action="INSERT_OR_UPDATE"&gt;
+        &lt;conditions&gt;&lt;![CDATA[/*
+Execution script is the script that is run when executing the action.
+   Avaliable variables: 
+        current = GlideRecord object of the current record 
+        g_current = the current to the partent table  
+       answer ;
+*/
+if (g_current.stage == 'requested' &amp;&amp; gs.hasRole('x_stave_sc.inventory_manager'))
+{
+	answer = true;
+}
+else
+{
+	answer = false;
+}]]&gt;&lt;/conditions&gt;
+        &lt;short_description&gt;New Transfer Order Line 2&lt;/short_description&gt;
+        &lt;sys_created_by&gt;jonas.perusquia&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2021-02-16 19:26:37&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;c2dbd97a1bd26050b521a9722a4bcbe9&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;jonas.perusquia&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2021-02-16 21:01:53&lt;/sys_updated_on&gt;
+    &lt;/x_stave_sc_portal_condition&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-16 21:02:24</sys_created_on>
+        <sys_id>d9c1b9fe1b166050b521a9722a4bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Transfer Order Line 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sys_metadata_link_d9c1b9fe1b166050b521a9722a4bcb89</sys_update_name>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-16 21:02:24</sys_updated_on>
+        <tablename>x_stave_sc_portal_condition</tablename>
+    </sys_metadata_link>
+</record_update>

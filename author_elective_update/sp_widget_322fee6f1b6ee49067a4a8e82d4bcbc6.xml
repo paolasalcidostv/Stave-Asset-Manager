@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, spUtil, $rootScope, spModal) {  
+	/* widget controller */  
+	var c = this;
+	var today = new Date();
+	today.setHours(0,0,0,0);
+	
+	var now = new Date();
+	$scope.now = now;
+
+	c.data.loading = true;
+	c.timePeriod = c.options.default_range;
+	c.timeRange = {
+		start: today,
+		end: now
+	};
+
+	function processStyle() {
+		if(c.data.conditional_style)
+		{
+			c.data.color = "info"
+			if(c.data.count >= c.data.danger_target){
+				c.data.color = "danger"
+			}
+			else if(c.data.count >= c.data.warning_target){
+				c.data.color = "warning"
+			}
+			else if(c.data.count >= c.data.success_target){
+				c.data.color = "success"
+			}
+		}
+		
+		getIds();
+	}
+	
+	function getIds(){
+		c.server.get({ 
+			query: c.data.query, 
+			getIds: true, 
+			table: c.data.table
+		})
+		.then(function(r){
+			c.queryIds = r.data.queryIds;
+		});
+	}
+
+	c.loadRecords = loadRecords;
+	function loadRecords(ids) {
+		ids = ids || [];
+		var input = {
+			table: c.data.table,
+			filter: 'sys_idIN'+ids.join(),
+			page_id: c.data.page_id,
+			isModal: true
+		};
+	
+		spModal.open({
+			widget: '886cfaee1bd11090f290997fbd4bcb83',
+			widgetInput: input,
+			buttons: [],
+			size: 'lg',
+			footerStyle: {"display":"none"},
+			headerStyle: {"display":"none"}
+		}).then(function() {});
+	}
+	
+	c.periodChange = periodChange;
+	function periodChange() {
+		var rangePeriod = {
+			end: c.timeRange.end
+		};
+
+		switch(c.timePeriod)
+		{
+			case 'Week':
+				rangePeriod.start = moment().subtract(1, 'week');
+				break;
+			case 'Month':
+				rangePeriod.start = moment().subtract(1, 'month');
+				break;
+			case 'Quarter':
+				rangePeriod.start = moment().subtract(1, 'quarter');
+				break;
+			case 'Year':
+				rangePeriod.start = moment().subtract(1, 'year').toDate();
+				break;
+			case 'Today':
+				rangePeriod.start = moment(c.timeRange.start);
+				break;
+			default:
+				rangePeriod.start = moment(c.timeRange.start);
+				break;
+		}
+
+		if (c.timePeriod)
+		{
+			c.data.rangeFilter = {};
+			c.data.rangeFilter.start = dateToSnowFormat(c.timePeriod != 'Year' ? rangePeriod.start.startOf('day').toDate() : rangePeriod.start);
+			c.data.rangeFilter.end = dateToSnowFormat(rangePeriod.end);		
+		}
+		else
+		{
+			delete c.data.rangeFilter;
+		}
+
+		c.server.update().then(function(){
+			c.data.loading = false;
+			processStyle();
+		});
+	}
+
+	function dateToSnowFormat(date){
+		var snowFormat = date.toISOString();
+		snowFormat = snowFormat.replace('T', ' ');
+		snowFormat = snowFormat.replace(/(\.\d+Z+)/, '');
+
+		return snowFormat;
+	}
+
+	spUtil.recordWatch($scope, c.data.table, c.data.query, function(name, data) {
+		periodChange()
+	});
+
+	$rootScope.$on('x_stave_sc.periodChange',function(e, params) {
+		c.timePeriod = params.timePeriod;
+		c.timeRange.start = params.start;
+		c.timeRange.end = params.end;
+		periodChange()
+	});
+
+
+	periodChange();
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.time-controls {
+  	display: flex;
+    align-items: center;
+    margin: 5px;
+  	justify-content: center;
+}
+
+.bg-gradient-x-success {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-success), to(lighten($brand-success, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.bg-gradient-x-info {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-info), to(lighten($brand-info, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.bg-gradient-x-danger {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-danger), to(lighten($brand-danger, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.bg-gradient-x-warning {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-warning), to(lighten($brand-warning, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.card-bg-default {
+	background-color: white;
+}
+
+.card-bg-primary {
+	background-color: #286090;
+}
+
+.card-bg-success {
+	background-color: #449d44;
+}
+
+.card-bg-info {
+	background-color: #31b0d5;
+}
+
+.card-bg-warning {
+	background-color: #ec971f;
+}
+
+.card-bg-danger {
+	background-color: #c9302c;
+}
+
+.progress-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  transition: width 0.6s ease;}
+
+.progress.progress-sm {
+  height: 0.5rem !important;}
+.progress:last-child {
+  margin-bottom: 1rem;}
+.box-shadow-2 {
+  -webkit-box-shadow: 0 10px 18px 0 rgba(62, 57, 107, 0.2);
+  box-shadow: 0 10px 18px 0 rgba(62, 57, 107, 0.2);}
+.progress {
+  margin-bottom: 3rem;
+}
+
+.mt-1, .my-1 {
+  margin-top: 2rem !important;
+}
+
+.mt-0 {
+	margin-top: 0px !important;
+}
+
+.mr-10 {
+	margin-right: 10px;
+}
+
+.mr-20 {
+	margin-right: 20px;
+}
+
+.overflow-anywhere {
+	overflow-wrap: anywhere;
+  margin-right: auto;
+}
+
+.stv-flex {
+	display: flex;
+}
+
+.mb-0, .my-0 {
+  margin-bottom: 0 !important;
+}
+
+.progress {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #EEE;
+  border-radius: 0.25rem;
+}
+
+.fa-4x{
+  font-size:3rem;
+}
+
+.card {
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(62, 57, 107, .07);
+    box-shadow: 0px 1px 15px 1px rgba(62, 57, 107, .07);
+}
+
+.card-content {
+    height: 100%;
+}
+
+a.pull-up {
+  cursor:pointer;
+}
+
+.stop {
+  animation:none;
+  display:none;
+}
+
+.time-controls label {
+    margin-left: 0.4rem;
+}
+
+.total_records {
+    margin-left: 10px;
+    border: 2px solid #fff;
+    padding: 3px;
+    border-radius: 50px;
+    float: right;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 49px;
+    display: flex;
+		justify-content: center;
+		align-items: center;
+  
+  h3 {
+    margin: 0;
+  }
+}</css>
+        <data_table>sp_instance_vlist</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>title,glyph,color,url,table,filter,roles</field_list>
+        <has_preview>true</has_preview>
+        <id>stv-sc-count-2</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Icon With Count 2</name>
+        <option_schema>[{"name":"count_type","section":"Data","label":"Count Type","type":"choice","choices":[{"label":"Count","value":"Count"},{"label":"Average","value":"Average"},{"label":"Sum","value":"Sum"},{"label":"Average Difference","value":"Average Difference"}]},{"name":"count_field","section":"Data","label":"Count Field","type":"field_name"},{"name":"count_style","section":"Presentation","label":"Count Style","type":"string"},{"name":"count_target","section":"Data","label":"Count Target","type":"string"},{"name":"url","section":"Behavior","label":"URL","type":"string"},{"name":"url_target","section":"Behavior","label":"URL Target","type":"string"},{"name":"conditional_style","section":"Presentation","default_value":"false","label":"Conditional Style","type":"boolean"},{"name":"success_target","section":"Presentation","default_value":"0","label":"Success Target","type":"integer"},{"hint":"","name":"warning_target","section":"Presentation","default_value":"50","label":"Warning Target","type":"integer"},{"name":"danger_target","section":"Presentation","default_value":"100","label":"Danger Target","type":"integer"},{"name":"id_field","section":"Data","label":"ID Field","type":"string"},{"name":"roles","section":"Behavior","label":"Roles","type":"string"},{"name":"average_to_substract","section":"Data","label":"Average to Substract","type":"field_name"},{"name":"prefix","section":"Presentation","label":"Prefix","type":"string"},{"name":"filter_by_range","section":"other","label":"Filter By Range","type":"boolean"},{"hint":"Default choice for the range control","name":"default_range","section":"other","label":"Default range","type":"choice","choices":[{"label":"Today","value":"Today"},{"label":"Week","value":"Week"},{"label":"Month","value":"Month"},{"label":"Quarter","value":"Quarter"},{"label":"Year","value":"Year"},{"label":"Range","value":"Range"}]},{"name":"is_clickable","section":"Behavior","default_value":"false","label":"Is Clickable","type":"boolean"},{"name":"background_color","section":"Presentation","label":"Background Color","type":"string"},{"name":"font_color","section":"Presentation","label":"Font Color","type":"string"},{"name":"show_count","section":"Behavior","default_value":"false","label":"ShowCount","type":"boolean"}]</option_schema>
+        <public>false</public>
+        <roles>x_stave_sc.user,x_stave_sc.external_user,x_stave_sc.fleet_user,x_stave_sc.asset_user</roles>
+        <script><![CDATA[(function() {
+	if(!input){
+		// Card Style
+		data.card_style = {};
+		data.font_style = {};
+		if (options.background_color) data.card_style['background-color'] = options.background_color;
+		else data.color = options.color;
+		if (options.font_color) data.font_style.color = options.font_color;
+		else if (data.color && data.color !== 'default') data.font_style.color = 'white';
+		// End Card Style
+		data.page_id = options.sp_page ;
+		data.count = 0;
+		data.table = options.table||"incident";
+		data.filter = options.filter||"active=true";
+		data.count_type = options.count_type || '';
+		data.count_field = options.count_field ||'';
+		data.count_style = options.count_style ||'';
+		data.count_target = options.count_target ||'';
+		data.show_progress = false;
+		data.url = options.url ||'';
+		data.url_target = options.url_target||'';
+		data.conditional_style = options.conditional_style=="true"?true:false;
+		data.success_target = options.success_target;
+		data.warning_target = options.warning_target;
+		data.danger_target = options.danger_target;
+		data.id_field = options.id_field||''
+		data.sys_id = $sp.getParameter('sys_id');
+		data.break_loop = false
+		data.show_count = options.show_count || false;
+		data.totalRecords = 0;
+	} else {
+		if(input.getIds){
+			data.show_count = input.show_count;
+			var gr = new GlideRecord(input.table);
+			gr.addEncodedQuery(input.query);
+			
+			gr.query();
+			
+			var ids = [];
+			while(gr.next()){
+				ids.push(gr.sys_id + '');
+			}
+			
+			data.queryIds = ids;
+			return;
+		}
+		
+		var count = new GlideAggregate(input.table);
+		count.addEncodedQuery(input.filter);
+
+		if(input.rangeFilter){
+			count.addQuery('sys_created_on', '>=', input.rangeFilter.start);
+			count.addQuery('sys_created_on', '<=', input.rangeFilter.end);
+		}
+
+		if(input.id_field!=''){
+			count.addQuery(input.id_field,input.sys_id);
+		}
+		
+		count.setGroup(false);
+		if(input.count_type == 'Count'){
+			count.addAggregate('COUNT');	
+		}
+		
+		if(input.count_type == 'Average' || input.count_type == 'Average Difference'){
+			count.addAggregate('AVG',input.count_field);	
+		}
+		
+		if(input.count_type == 'Sum'){
+			count.addAggregate('Sum',input.count_field);
+			if(options.show_count){
+				count.addAggregate('COUNT');
+			}
+		}
+
+		data.query = count.getEncodedQuery();
+		
+		count.query();
+		data.debug_msg =1;
+		while (count.next())
+		{
+			if(input.count_type == 'Count')
+			{
+				data.count = count.getAggregate('COUNT');
+			}
+			if(input.count_type == 'Average')
+			{
+				data.count = count.getAggregate('AVG',input.count_field);
+
+			}
+			if(input.count_type == 'Sum')
+			{
+				data.count = count.getAggregate('SUM',input.count_field);
+				console.log(input.show_count);
+				console.log(typeof input.show_count);
+				if(input.show_count === 'true'){
+					console.log(data.show_count);
+					data.show_count = true;
+					data.totalRecords = count.getAggregate('COUNT');
+					console.log(data.show_count);
+				}
+			}
+			if(input.count_type == 'Average Difference')
+			{
+				var startValue = count.getAggregate('AVG',input.count_field);
+				var countToSubstract = new GlideAggregate(input.table);
+				countToSubstract.addEncodedQuery(input.filter);
+				countToSubstract.addAggregate('AVG', options.average_to_substract);
+				countToSubstract.query();
+				if(countToSubstract.next())
+				{
+					var endValue = countToSubstract.getAggregate('AVG', options.average_to_substract);
+
+					if(startValue && endValue && GlideDateTime(startValue) && GlideDateTime(endValue))
+					{
+						var start = new GlideDateTime(startValue);
+						var end = new GlideDateTime(endValue);
+						data.count = GlideDateTime.subtract(start, end).getDisplayValue();
+					}
+					else 
+					{
+						data.count = 0;
+					}
+				}
+			}
+			if(input.count =='')
+			{
+				input.count=0;
+			}
+		}
+
+		if(input.count_target!='')
+		{
+			data.show_progress =false;
+			data.percentage = data.count/input.count_target*100;
+			if(data.percentage >=100){
+				data.percentage=100;
+			}
+		}
+
+	}
+
+	options.title = gs.getMessage(options.title);
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 19:41:48</sys_created_on>
+        <sys_id>322fee6f1b6ee49067a4a8e82d4bcbc6</sys_id>
+        <sys_mod_count>93</sys_mod_count>
+        <sys_name>Icon With Count 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_widget_322fee6f1b6ee49067a4a8e82d4bcbc6</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 00:30:11</sys_updated_on>
+        <template><![CDATA[<a class="card" ng-href="{{::data.url}}" target="{{::data.url_target}}" ng-class="{'pull-up':data.url!=''}">
+  <div class="card-content {{ data.color ? 'card-bg-' + data.color : '' }}" ng-style="data.card_style">
+    <div class="card-body" optional-click-action="c.loadRecords(c.queryIds)" optional-click="{{::c.options.is_clickable}}">
+      <i ng-if="c.data.loading" ng-class="{ 'stop': !c.data.loading}"  class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+
+      <div class="stv-flex" ng-show="!c.data.loading">
+        
+        <div ng-if="data.count_type != '' && options.glyph">
+          <h3 ng-style="data.font_style" class="nopadding mt-0 mr-20">
+            <span class="fa fa-{{::options.glyph}} fa-4x info font-large-2 float-right"></span>
+          </h3>
+        </div>
+        <div ng-if="data.count_type == ''">
+          <span ng-style="data.font_style" class="fa fa-{{::c.options.glyph}} fa-4x info font-large-2 float-right"></span>
+        </div>
+        
+        <div class="overflow-anywhere">
+          <h4 class="mt-0" ng-style="data.font_style">{{::c.options.title}}</h4>
+          <h3 class="mt-0" ng-style="data.font_style" ng-if="data.count_type!='' && c.options.prefix">
+            {{c.options.prefix}}{{c.data.count | number: 2}}
+          </h3>
+          <h3 class="mt-0" ng-style="data.font_style" ng-if="data.count_type!='' && !c.options.prefix">
+            {{c.data.count}}
+          </h3>
+        </div>
+        
+        <div class="total_records" ng-if="c.options.show_count!='false'">
+          <h3 ng-style="data.font_style">
+            {{c.data.totalRecords}}
+          </h3>
+      	</div>
+        
+      </div>
+			
+    </div>
+    
+    <div class="progress progress-sm mt-1 mb-0 box-shadow-2" ng-if="data.show_progress">
+      <div class="progress-bar bg-{{::data.color}} bg-gradient-x-{{c.data.color}}" role="progressbar" style="width:{{data.percentage}}%;" aria-valuenow="data.percentage" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</a>
+<stave-debug/>
+]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_widget_322fee6f1b6ee49067a4a8e82d4bcbc6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope, spUtil, $rootScope, spModal) {  
+	/* widget controller */  
+	var c = this;
+	var today = new Date();
+	today.setHours(0,0,0,0);
+	
+	var now = new Date();
+	$scope.now = now;
+
+	c.data.loading = true;
+	c.timePeriod = c.options.default_range;
+	c.timeRange = {
+		start: today,
+		end: now
+	};
+
+	function processStyle() {
+		if(c.data.conditional_style)
+		{
+			c.data.color = "info"
+			if(c.data.count &gt;= c.data.danger_target){
+				c.data.color = "danger"
+			}
+			else if(c.data.count &gt;= c.data.warning_target){
+				c.data.color = "warning"
+			}
+			else if(c.data.count &gt;= c.data.success_target){
+				c.data.color = "success"
+			}
+		}
+		
+		getIds();
+	}
+	
+	function getIds(){
+		c.server.get({ 
+			query: c.data.query, 
+			getIds: true, 
+			table: c.data.table
+		})
+		.then(function(r){
+			c.queryIds = r.data.queryIds;
+		});
+	}
+
+	c.loadRecords = loadRecords;
+	function loadRecords(ids) {
+		ids = ids || [];
+		var input = {
+			table: c.data.table,
+			filter: 'sys_idIN'+ids.join(),
+			page_id: c.data.page_id,
+			isModal: true
+		};
+	
+		spModal.open({
+			widget: '886cfaee1bd11090f290997fbd4bcb83',
+			widgetInput: input,
+			buttons: [],
+			size: 'lg',
+			footerStyle: {"display":"none"},
+			headerStyle: {"display":"none"}
+		}).then(function() {});
+	}
+	
+	c.periodChange = periodChange;
+	function periodChange() {
+		var rangePeriod = {
+			end: c.timeRange.end
+		};
+
+		switch(c.timePeriod)
+		{
+			case 'Week':
+				rangePeriod.start = moment().subtract(1, 'week');
+				break;
+			case 'Month':
+				rangePeriod.start = moment().subtract(1, 'month');
+				break;
+			case 'Quarter':
+				rangePeriod.start = moment().subtract(1, 'quarter');
+				break;
+			case 'Year':
+				rangePeriod.start = moment().subtract(1, 'year').toDate();
+				break;
+			case 'Today':
+				rangePeriod.start = moment(c.timeRange.start);
+				break;
+			default:
+				rangePeriod.start = moment(c.timeRange.start);
+				break;
+		}
+
+		if (c.timePeriod)
+		{
+			c.data.rangeFilter = {};
+			c.data.rangeFilter.start = dateToSnowFormat(c.timePeriod != 'Year' ? rangePeriod.start.startOf('day').toDate() : rangePeriod.start);
+			c.data.rangeFilter.end = dateToSnowFormat(rangePeriod.end);		
+		}
+		else
+		{
+			delete c.data.rangeFilter;
+		}
+
+		c.server.update().then(function(){
+			c.data.loading = false;
+			processStyle();
+		});
+	}
+
+	function dateToSnowFormat(date){
+		var snowFormat = date.toISOString();
+		snowFormat = snowFormat.replace('T', ' ');
+		snowFormat = snowFormat.replace(/(\.\d+Z+)/, '');
+
+		return snowFormat;
+	}
+
+	spUtil.recordWatch($scope, c.data.table, c.data.query, function(name, data) {
+		periodChange()
+	});
+
+	$rootScope.$on('x_stave_sc.periodChange',function(e, params) {
+		c.timePeriod = params.timePeriod;
+		c.timeRange.start = params.start;
+		c.timeRange.end = params.end;
+		periodChange()
+	});
+
+
+	periodChange();
+
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.time-controls {
+  	display: flex;
+    align-items: center;
+    margin: 5px;
+  	justify-content: center;
+}
+
+.bg-gradient-x-success {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-success), to(lighten($brand-success, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-success 0%, lighten($brand-success, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.bg-gradient-x-info {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-info), to(lighten($brand-info, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-info 0%, lighten($brand-info, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.bg-gradient-x-danger {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-danger), to(lighten($brand-danger, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-danger 0%, lighten($brand-danger, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.bg-gradient-x-warning {
+  background-image: -webkit-gradient(linear, left top, right top, from($brand-warning), to(lighten($brand-warning, 10%)));
+  background-image: -webkit-linear-gradient(left, $brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-image: -moz-linear-gradient(left, $brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-image: -o-linear-gradient(left, $brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-image: linear-gradient(to right,$brand-warning 0%, lighten($brand-warning, 10%) 100%);
+  background-repeat: repeat-x;
+}
+
+.card-bg-default {
+	background-color: white;
+}
+
+.card-bg-primary {
+	background-color: #286090;
+}
+
+.card-bg-success {
+	background-color: #449d44;
+}
+
+.card-bg-info {
+	background-color: #31b0d5;
+}
+
+.card-bg-warning {
+	background-color: #ec971f;
+}
+
+.card-bg-danger {
+	background-color: #c9302c;
+}
+
+.progress-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  transition: width 0.6s ease;}
+
+.progress.progress-sm {
+  height: 0.5rem !important;}
+.progress:last-child {
+  margin-bottom: 1rem;}
+.box-shadow-2 {
+  -webkit-box-shadow: 0 10px 18px 0 rgba(62, 57, 107, 0.2);
+  box-shadow: 0 10px 18px 0 rgba(62, 57, 107, 0.2);}
+.progress {
+  margin-bottom: 3rem;
+}
+
+.mt-1, .my-1 {
+  margin-top: 2rem !important;
+}
+
+.mt-0 {
+	margin-top: 0px !important;
+}
+
+.mr-10 {
+	margin-right: 10px;
+}
+
+.mr-20 {
+	margin-right: 20px;
+}
+
+.overflow-anywhere {
+	overflow-wrap: anywhere;
+  margin-right: auto;
+}
+
+.stv-flex {
+	display: flex;
+}
+
+.mb-0, .my-0 {
+  margin-bottom: 0 !important;
+}
+
+.progress {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #EEE;
+  border-radius: 0.25rem;
+}
+
+.fa-4x{
+  font-size:3rem;
+}
+
+.card {
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(62, 57, 107, .07);
+    box-shadow: 0px 1px 15px 1px rgba(62, 57, 107, .07);
+}
+
+.card-content {
+    height: 100%;
+}
+
+a.pull-up {
+  cursor:pointer;
+}
+
+.stop {
+  animation:none;
+  display:none;
+}
+
+.time-controls label {
+    margin-left: 0.4rem;
+}
+
+.total_records {
+    margin-left: 10px;
+    border: 2px solid #fff;
+    padding: 3px;
+    border-radius: 50px;
+    float: right;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 49px;
+    display: flex;
+		justify-content: center;
+		align-items: center;
+  
+  h3 {
+    margin: 0;
+  }
+}&lt;/css&gt;&lt;data_table&gt;sp_instance_vlist&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;title,glyph,color,url,table,filter,roles&lt;/field_list&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;stv-sc-count-2&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Icon With Count 2&lt;/name&gt;&lt;option_schema&gt;[{"name":"count_type","section":"Data","label":"Count Type","type":"choice","choices":[{"label":"Count","value":"Count"},{"label":"Average","value":"Average"},{"label":"Sum","value":"Sum"},{"label":"Average Difference","value":"Average Difference"}]},{"name":"count_field","section":"Data","label":"Count Field","type":"field_name"},{"name":"count_style","section":"Presentation","label":"Count Style","type":"string"},{"name":"count_target","section":"Data","label":"Count Target","type":"string"},{"name":"url","section":"Behavior","label":"URL","type":"string"},{"name":"url_target","section":"Behavior","label":"URL Target","type":"string"},{"name":"conditional_style","section":"Presentation","default_value":"false","label":"Conditional Style","type":"boolean"},{"name":"success_target","section":"Presentation","default_value":"0","label":"Success Target","type":"integer"},{"hint":"","name":"warning_target","section":"Presentation","default_value":"50","label":"Warning Target","type":"integer"},{"name":"danger_target","section":"Presentation","default_value":"100","label":"Danger Target","type":"integer"},{"name":"id_field","section":"Data","label":"ID Field","type":"string"},{"name":"roles","section":"Behavior","label":"Roles","type":"string"},{"name":"average_to_substract","section":"Data","label":"Average to Substract","type":"field_name"},{"name":"prefix","section":"Presentation","label":"Prefix","type":"string"},{"name":"filter_by_range","section":"other","label":"Filter By Range","type":"boolean"},{"hint":"Default choice for the range control","name":"default_range","section":"other","label":"Default range","type":"choice","choices":[{"label":"Today","value":"Today"},{"label":"Week","value":"Week"},{"label":"Month","value":"Month"},{"label":"Quarter","value":"Quarter"},{"label":"Year","value":"Year"},{"label":"Range","value":"Range"}]},{"name":"is_clickable","section":"Behavior","default_value":"false","label":"Is Clickable","type":"boolean"},{"name":"background_color","section":"Presentation","label":"Background Color","type":"string"},{"name":"font_color","section":"Presentation","label":"Font Color","type":"string"},{"name":"show_count","section":"Behavior","default_value":"false","label":"ShowCount","type":"boolean"}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles&gt;x_stave_sc.user,x_stave_sc.external_user,x_stave_sc.fleet_user,x_stave_sc.asset_user&lt;/roles&gt;&lt;script&gt;&lt;![CDATA[(function() {
+	if(!input){
+		// Card Style
+		data.card_style = {};
+		data.font_style = {};
+		if (options.background_color) data.card_style['background-color'] = options.background_color;
+		else data.color = options.color;
+		if (options.font_color) data.font_style.color = options.font_color;
+		else if (data.color &amp;&amp; data.color !== 'default') data.font_style.color = 'white';
+		// End Card Style
+		data.page_id = options.sp_page ;
+		data.count = 0;
+		data.table = options.table||"incident";
+		data.filter = options.filter||"active=true";
+		data.count_type = options.count_type || '';
+		data.count_field = options.count_field ||'';
+		data.count_style = options.count_style ||'';
+		data.count_target = options.count_target ||'';
+		data.show_progress = false;
+		data.url = options.url ||'';
+		data.url_target = options.url_target||'';
+		data.conditional_style = options.conditional_style=="true"?true:false;
+		data.success_target = options.success_target;
+		data.warning_target = options.warning_target;
+		data.danger_target = options.danger_target;
+		data.id_field = options.id_field||''
+		data.sys_id = $sp.getParameter('sys_id');
+		data.break_loop = false
+		data.show_count = options.show_count || false;
+		data.totalRecords = 0;
+	} else {
+		if(input.getIds){
+			data.show_count = input.show_count;
+			var gr = new GlideRecord(input.table);
+			gr.addEncodedQuery(input.query);
+			
+			gr.query();
+			
+			var ids = [];
+			while(gr.next()){
+				ids.push(gr.sys_id + '');
+			}
+			
+			data.queryIds = ids;
+			return;
+		}
+		
+		var count = new GlideAggregate(input.table);
+		count.addEncodedQuery(input.filter);
+
+		if(input.rangeFilter){
+			count.addQuery('sys_created_on', '&gt;=', input.rangeFilter.start);
+			count.addQuery('sys_created_on', '&lt;=', input.rangeFilter.end);
+		}
+
+		if(input.id_field!=''){
+			count.addQuery(input.id_field,input.sys_id);
+		}
+		
+		count.setGroup(false);
+		if(input.count_type == 'Count'){
+			count.addAggregate('COUNT');	
+		}
+		
+		if(input.count_type == 'Average' || input.count_type == 'Average Difference'){
+			count.addAggregate('AVG',input.count_field);	
+		}
+		
+		if(input.count_type == 'Sum'){
+			count.addAggregate('Sum',input.count_field);
+			if(options.show_count){
+				count.addAggregate('COUNT');
+			}
+		}
+
+		data.query = count.getEncodedQuery();
+		
+		count.query();
+		data.debug_msg =1;
+		while (count.next())
+		{
+			if(input.count_type == 'Count')
+			{
+				data.count = count.getAggregate('COUNT');
+			}
+			if(input.count_type == 'Average')
+			{
+				data.count = count.getAggregate('AVG',input.count_field);
+
+			}
+			if(input.count_type == 'Sum')
+			{
+				data.count = count.getAggregate('SUM',input.count_field);
+				console.log(input.show_count);
+				console.log(typeof input.show_count);
+				if(input.show_count === 'true'){
+					console.log(data.show_count);
+					data.show_count = true;
+					data.totalRecords = count.getAggregate('COUNT');
+					console.log(data.show_count);
+				}
+			}
+			if(input.count_type == 'Average Difference')
+			{
+				var startValue = count.getAggregate('AVG',input.count_field);
+				var countToSubstract = new GlideAggregate(input.table);
+				countToSubstract.addEncodedQuery(input.filter);
+				countToSubstract.addAggregate('AVG', options.average_to_substract);
+				countToSubstract.query();
+				if(countToSubstract.next())
+				{
+					var endValue = countToSubstract.getAggregate('AVG', options.average_to_substract);
+
+					if(startValue &amp;&amp; endValue &amp;&amp; GlideDateTime(startValue) &amp;&amp; GlideDateTime(endValue))
+					{
+						var start = new GlideDateTime(startValue);
+						var end = new GlideDateTime(endValue);
+						data.count = GlideDateTime.subtract(start, end).getDisplayValue();
+					}
+					else 
+					{
+						data.count = 0;
+					}
+				}
+			}
+			if(input.count =='')
+			{
+				input.count=0;
+			}
+		}
+
+		if(input.count_target!='')
+		{
+			data.show_progress =false;
+			data.percentage = data.count/input.count_target*100;
+			if(data.percentage &gt;=100){
+				data.percentage=100;
+			}
+		}
+
+	}
+
+	options.title = gs.getMessage(options.title);
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jason.garcia&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 19:41:48&lt;/sys_created_on&gt;&lt;sys_id&gt;322fee6f1b6ee49067a4a8e82d4bcbc6&lt;/sys_id&gt;&lt;sys_mod_count&gt;93&lt;/sys_mod_count&gt;&lt;sys_name&gt;Icon With Count 2&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_322fee6f1b6ee49067a4a8e82d4bcbc6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jason.garcia&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-09 00:30:11&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;a class="card" ng-href="{{::data.url}}" target="{{::data.url_target}}" ng-class="{'pull-up':data.url!=''}"&gt;
+  &lt;div class="card-content {{ data.color ? 'card-bg-' + data.color : '' }}" ng-style="data.card_style"&gt;
+    &lt;div class="card-body" optional-click-action="c.loadRecords(c.queryIds)" optional-click="{{::c.options.is_clickable}}"&gt;
+      &lt;i ng-if="c.data.loading" ng-class="{ 'stop': !c.data.loading}"  class="fa fa-spinner fa-spin fa-2x fa-fw"&gt;&lt;/i&gt;
+
+      &lt;div class="stv-flex" ng-show="!c.data.loading"&gt;
+        
+        &lt;div ng-if="data.count_type != '' &amp;&amp; options.glyph"&gt;
+          &lt;h3 ng-style="data.font_style" class="nopadding mt-0 mr-20"&gt;
+            &lt;span class="fa fa-{{::options.glyph}} fa-4x info font-large-2 float-right"&gt;&lt;/span&gt;
+          &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div ng-if="data.count_type == ''"&gt;
+          &lt;span ng-style="data.font_style" class="fa fa-{{::c.options.glyph}} fa-4x info font-large-2 float-right"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="overflow-anywhere"&gt;
+          &lt;h4 class="mt-0" ng-style="data.font_style"&gt;{{::c.options.title}}&lt;/h4&gt;
+          &lt;h3 class="mt-0" ng-style="data.font_style" ng-if="data.count_type!='' &amp;&amp; c.options.prefix"&gt;
+            {{c.options.prefix}}{{c.data.count | number: 2}}
+          &lt;/h3&gt;
+          &lt;h3 class="mt-0" ng-style="data.font_style" ng-if="data.count_type!='' &amp;&amp; !c.options.prefix"&gt;
+            {{c.data.count}}
+          &lt;/h3&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="total_records" ng-if="c.options.show_count!='false'"&gt;
+          &lt;h3 ng-style="data.font_style"&gt;
+            {{c.data.totalRecords}}
+          &lt;/h3&gt;
+      	&lt;/div&gt;
+        
+      &lt;/div&gt;
+			
+    &lt;/div&gt;
+    
+    &lt;div class="progress progress-sm mt-1 mb-0 box-shadow-2" ng-if="data.show_progress"&gt;
+      &lt;div class="progress-bar bg-{{::data.color}} bg-gradient-x-{{c.data.color}}" role="progressbar" style="width:{{data.percentage}}%;" aria-valuenow="data.percentage" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;stave-debug/&gt;
+]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>414415670</payload_hash>
+        <record_name>Icon With Count 2</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-09 00:30:11</sys_created_on>
+        <sys_id>c0216115db7664500e9c71f239961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178146427920000001</sys_recorded_at>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 00:30:11</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>882161158c766450391724f783a9aa51</update_guid>
+        <update_guid_history>882161158c766450391724f783a9aa51:414415670,c101211591766450b5aa2aa54cddfeb9:-285457891,f9a0a5dddf366450afb896c25967e614:1979542892,04bbd59d993664509c2abdf65f031572:-234416390,b86bd19d8b36645096017d701d6eefa8:649385323,dc2b1d5d093664508fb1ae4889554df6:503018305,860b519dd53664500de342a8bfd1dc11:649385323,11dad95dd8366450b20391f6a3e3b088:-1757688626,2caa195dba366450de4e41048e4c2173:-564577571,269ad55d0d366450a20ec7a09e555df8:-1918376295,768a955d61366450c908b66de51ea0ab:1759234098,de4a991d393664504a4b3850a580463d:1970297680,07c9151d2236645041db170e70190968:1245445977,7099911d1f36645057701eb9de5ab1bf:-2130363449,c279ddd9bb36645012733ceb4f420945:-1844732811,246999d96436645001f99260a457bca3:2123878423,68a891d936366450a3a7dbc5a5e1f59d:-1943744456,e69851d9f03664502dbf93f039e9f207:775484807,ba889d993b366450fdf7fbae1159ed5a:1115175566,65781999cb366450550efe7a4f23449f:-2132012583,0f581999b0366450e4d336f5d0b54f89:718844656,0b48d59905366450b0ae57ea70f3dc5d:-852032446,80389999303664501af6e5a06b16aa33:949619946,e6f7dd59ab36645035961a1f81075a40:221765135,7bd75d59253664502febf475e3dac8ff:-496058247,dfb75d59333664509f25e96d6c7ba972:-737664942,e1a71d596136645013579a9661aa98a2:-915795312,dc7715590136645051a9a9c8498fdc91:712534974,e4471959783664509e64274cbaebde3b:-1952571617,412795599636645089948c9de37a0e47:592237581,2207155908366450cf0738bc7bb5163e:-1366151001,fad69d19443664504cb5604e786ad7a0:490934389,8bc6d5199c3664502642d645bbe1f242:-592529991,4f96d919d736645086c7c2b4c69cdcc8:-1873322492,b8569119c43664502e2099a625b33b19:-461317224,5c1611d56e36645046682fdc49b9da08:1921014674,cad5dd95313664506e5a427486e547d4:-1002910490,e0a49595113664503c9874271d84a957:153789536,df341555b13664500c62046edd5a3da9:-1321972915,bfb299d17036645095d8e1837bc8c9d9:1935929600,fa72d1d193366450a501cd8c61369230:101890865,09115d11ff36645024aef6a3fb77f8a0:1577653316,232f89d9cdf264508b2e343a4d2feb98:-2063158117,651fc5d9faf264502f10ab88347b2400:-90887717,8bbec199cef264509dca5e40d3c7bffc:1656840613,528e0119dcf2645095ee4f4556544b78:-285664272,5c6e0999fff26450cb698c81afffce6b:1851365476,793ec19980f264503b3e5d58ee750c9a:449427484,611e051905f264503ee471c00f6ec1bf:-769891707,ea6dc9d58ff26450f4ee689175954d81:1671313756,496d8dd5d4f26450ba5c809d443b7f98:-304115803,2c3d4d95bff26450419ecfdc486d14e9:-248977828,d88ccd957bf26450ee1815b49b900b94:-245426564,cf5c0d9563f264505cbf5ed248b5d260:-1792675312,f9db059591f264507eb03e7d99969a29:-2072147931,eb826ba784a228909207d6a673f8facc:2073898135,bc9e9f6f686228904ad3cd12c6f29473:-255376777,f6f08fab5262ec10c19e7209faaccc0f:1712654509,86104f6b1a62ec10a72811b34fdf7aa6:1158232300,9d9ff26bae62ec1018b4cf4469746bd2:-2085306836,017f362b6062ec101233029f49adc487:-528822850,ba9b72ef5daee4906e347211b340189f:786601544,2e2b72aff2aee490d0943e7d1e93345b:-386882062,555a3a6fb0aee49088557c763df1e7a2:786601544,c379f62fb0aee490fb38ceb11f89281d:-1766587071,e269362f4aaee49008f9ee8392771c87:1850447990,1359f22fd5aee4903d282dcc0e44abbf:1773860192,b249feeb35aee4908978a4082eadea93:343938901,7a293aeb7aaee4907272157a03d673fa:-1766587071,71097aeb99aee4909ad3508bce7614ec:-1519133140,3618b2abc7aee490a1b4525fef0ad640:206856671,3ef7fe6b0faee4906d6427bae7a77dff:-612957974,4db7ba6bdaaee4900406ce70ba20d1b9:206856671,d297ba6b3baee490a53083fabe3b5ea8:-764548260,bf77f26b8daee4908656fc1eac3eb644:1795507026,0e67f26b0aaee490753cc5c04f148b90:-249055718,0557fe2ba8aee490b72500c5b0efadde:1991599485,e176fae785aee4907826ab590e53389d:2046248617,737576a70baee490aebff9d23afb2190:2006242926,e855f2a794aee490acdb96e15833cbd2:804166728,8615be6721aee49079dac192513873ad:-1550375634,21a472677eaee490d5e05d4f52e44d65:-929019646,d78432678eaee49002fc8916477f5ad9:899643396,d964b2270baee490ae80b701da897b6d:-1682755768,b2247a2788aee4901fb1147c9835b672:-1247390088,12a37ae3d8aee490a34df9bf5b9c24c0:979642504,ea5376e381aee4908e58515a730470f7:-832814363,8043faa3a2aee490c652b5276990a535:397897611,3df236a358aee490769096bfd05f0475:-1279000864,18b2f66356aee490b2ed51c8b5391b4a:353006247,5781fa2346aee49036f10614e90bf6c1:-312267163,30cfaeaf426ee4907831880f61d3e535:2115919147,074f62af746ee4908a535bcca3927f7f:93350062,b62f62afb56ee4902df93bd8975911ad:746211226</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">15074d25dbb2a4500e9c71f23996195c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-09 17:14:36</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>08dbbe0de2f441f682ab313e6b7c9ca4</sys_id>
+        <sys_metadata>322fee6f1b6ee49067a4a8e82d4bcbc6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Icon With Count 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_widget_322fee6f1b6ee49067a4a8e82d4bcbc6</sys_update_name>
+        <sys_update_version display_value="sp_widget_322fee6f1b6ee49067a4a8e82d4bcbc6">c0216115db7664500e9c71f239961952</sys_update_version>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 17:14:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

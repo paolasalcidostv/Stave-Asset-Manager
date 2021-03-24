@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">fdb86d68dbf12010e2620181ca96193f</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Interceptor">7f566b4edb7a3b00f99a41deaa9619e2</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:05:06</sys_created_on>
+        <sys_id>79b86d68dbf12010e2620181ca961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_79b86d68dbf12010e2620181ca961941</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:05:06</sys_updated_on>
+        <table/>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"wizard_id": {
+		"value": "a28d237047622100158b949b6c9a710d",
+		"displayValue": "a28d237047622100158b949b6c9a710d"
+	},
+	"filter": {
+		"value": "",
+		"displayValue": ""
+	},
+	"page": {
+		"value": "stv_sc_new_asset_details",
+		"displayValue": "stv_sc_new_asset_details"
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=79b86d68dbf12010e2620181ca961941"/>
+</record_update>

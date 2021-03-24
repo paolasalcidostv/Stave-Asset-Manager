@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter table="alm_asset">retired&lt;javascript:gs.beginningOfToday()<item endquery="false" field="retired" goto="false" newquery="false" operator="&lt;" or="false" value="javascript:gs.beginningOfToday()"/>
+        </filter>
+        <glyph>times</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">6559a7631be2289067a4a8e82d4bcbb4</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Icon With Count 2">322fee6f1b6ee49067a4a8e82d4bcbc6</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-03 23:56:20</sys_created_on>
+        <sys_id>ab69a7631be2289067a4a8e82d4bcb13</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>EOL Assets</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_ab69a7631be2289067a4a8e82d4bcb13</sys_update_name>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 16:25:49</sys_updated_on>
+        <table>alm_asset</table>
+        <title>EOL Assets</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"count_type": {
+		"value": "Sum",
+		"displayValue": "Sum"
+	},
+	"count_field": {
+		"value": "cost",
+		"displayValue": "cost"
+	},
+	"count_style": {
+		"value": "",
+		"displayValue": ""
+	},
+	"count_target": {
+		"value": "",
+		"displayValue": ""
+	},
+	"url": {
+		"value": "",
+		"displayValue": ""
+	},
+	"url_target": {
+		"value": "",
+		"displayValue": ""
+	},
+	"conditional_style": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"success_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"warning_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"danger_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"id_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"roles": {
+		"value": "",
+		"displayValue": ""
+	},
+	"average_to_substract": {
+		"value": "",
+		"displayValue": ""
+	},
+	"prefix": {
+		"value": "$",
+		"displayValue": "$"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"is_clickable": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "#689EB8",
+		"displayValue": "#689EB8"
+	},
+	"font_color": {
+		"value": "white",
+		"displayValue": "white"
+	},
+	"show_count": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=ab69a7631be2289067a4a8e82d4bcb13"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_instance_vlist_ab69a7631be2289067a4a8e82d4bcb13</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_vlist"&gt;&lt;sp_instance_vlist action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field/&gt;&lt;field_list/&gt;&lt;filter table="alm_asset"&gt;retired&amp;lt;javascript:gs.beginningOfToday()&lt;item endquery="false" field="retired" goto="false" newquery="false" operator="&amp;lt;" or="false" value="javascript:gs.beginningOfToday()"/&gt;&lt;/filter&gt;&lt;glyph&gt;times&lt;/glyph&gt;&lt;id/&gt;&lt;maximum_entries&gt;5&lt;/maximum_entries&gt;&lt;order&gt;1&lt;/order&gt;&lt;order_by/&gt;&lt;order_direction&gt;asc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;6559a7631be2289067a4a8e82d4bcbb4&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="Icon With Count 2"&gt;322fee6f1b6ee49067a4a8e82d4bcbc6&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_vlist&lt;/sys_class_name&gt;&lt;sys_created_by&gt;jason.garcia&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 23:56:20&lt;/sys_created_on&gt;&lt;sys_id&gt;ab69a7631be2289067a4a8e82d4bcb13&lt;/sys_id&gt;&lt;sys_mod_count&gt;32&lt;/sys_mod_count&gt;&lt;sys_name&gt;EOL Assets&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_vlist_ab69a7631be2289067a4a8e82d4bcb13&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;jason.garcia&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-09 16:25:49&lt;/sys_updated_on&gt;&lt;table&gt;alm_asset&lt;/table&gt;&lt;title&gt;EOL Assets&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"count_type": {
+		"value": "Sum",
+		"displayValue": "Sum"
+	},
+	"count_field": {
+		"value": "cost",
+		"displayValue": "cost"
+	},
+	"count_style": {
+		"value": "",
+		"displayValue": ""
+	},
+	"count_target": {
+		"value": "",
+		"displayValue": ""
+	},
+	"url": {
+		"value": "",
+		"displayValue": ""
+	},
+	"url_target": {
+		"value": "",
+		"displayValue": ""
+	},
+	"conditional_style": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"success_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"warning_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"danger_target": {
+		"value": null,
+		"displayValue": ""
+	},
+	"id_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"roles": {
+		"value": "",
+		"displayValue": ""
+	},
+	"average_to_substract": {
+		"value": "",
+		"displayValue": ""
+	},
+	"prefix": {
+		"value": "$",
+		"displayValue": "$"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"is_clickable": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "#689EB8",
+		"displayValue": "#689EB8"
+	},
+	"font_color": {
+		"value": "white",
+		"displayValue": "white"
+	},
+	"show_count": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_vlist&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=ab69a7631be2289067a4a8e82d4bcb13"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1672468970</payload_hash>
+        <record_name>EOL Assets</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-09 16:25:49</sys_created_on>
+        <sys_id>f6db78e5db72a4500e9c71f2399619d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17817cf11650000001</sys_recorded_at>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 16:25:49</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>bedb78e55572a450aeee95247e4188d1</update_guid>
+        <update_guid_history>bedb78e55572a450aeee95247e4188d1:1672468970,ddcb74e53972a450f05e7d5cf8711d27:1950067292,76a2e9553f766450ce3947e18be3ba45:1672468970,e951e515c57664501e536a6f482f6246:1950067292,9f316515ca7664509857527d21be290a:1672468970,8bb065dd7f3664505054054393b0384c:1950067292,e3dbd1dd27366450a78a3cb3068a3e59:1672468970,d1cb1d9d273664503a2b596beb94ab44:1950067292,997bd99d29366450067eff6c413c6972:1672468970,cd3b959d3736645014d528f0be9bdb32:1950067292,7dea119db4366450a2f07cd619a05e83:1672468970,4dbad55d673664507705ee1d6f98547e:1950067292,7a5a991d083664501b13aa6dc45c6748:1672468970,4ce9551d7a366450fc07a70b9f0ed186:1950067292,96a9ddd97f366450ebe1f621b943aecb:1672468970,81b8d1d9cd36645037bf1ecf8e87e37e:1950067292,35181199803664508c9f843427510308:1672468970,1f77115922366450f9003b881340124c:1950067292,08b65919ca36645068020dbd592006b8:1672468970,1f669519fc3664508806dc4d211fdd67:1950067292,06269119373664500a45efd4a876d543:1672468970,e3e511d5203664503226e4a58119b115:1950067292,9a1559956b366450842049374634609b:1672468970,72b4dd555536645057d047c2dcaa7bf2:1950067292,5464dd557136645043711fa62dd1a4e9:1672468970,c292d1d135366450a98cbbd33bd6a4b7:1950067292,672151510936645030ab1ec129842998:1672468970,96bd051960f26450abef616d1e1acfc4:1950067292,f6ad051954f26450c25782fcff751e1f:1167566915,13bb0515f2f2645022a9d67f903d09fd:1950067292,66ab2b2759e22890c83fc69d82f88a42:1672468970,96a9ab63d0e2289030734bdeecb65217:120115626,2369a7632ce228909adf4c8a8c324715:-355689365</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">adce3ca9db72a4500e9c71f23996190c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jason.garcia</sys_created_by>
+        <sys_created_on>2021-03-09 16:38:34</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>359135f05c9743f8ac7d69d514c60c40</sys_id>
+        <sys_metadata>ab69a7631be2289067a4a8e82d4bcb13</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EOL Assets</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_ab69a7631be2289067a4a8e82d4bcb13</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_ab69a7631be2289067a4a8e82d4bcb13">f6db78e5db72a4500e9c71f2399619d2</sys_update_version>
+        <sys_updated_by>jason.garcia</sys_updated_by>
+        <sys_updated_on>2021-03-09 16:38:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

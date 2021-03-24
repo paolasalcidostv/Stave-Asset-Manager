@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter table="x_stave_sc_work_order_task">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>2</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">fcb8e968dbf12010e2620181ca96199e</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Task List">9e39a470db9e7b00f99a41deaa961973</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-16 00:05:03</sys_created_on>
+        <sys_id>3cb8e968dbf12010e2620181ca9619ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tasks</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_3cb8e968dbf12010e2620181ca9619ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-16 00:05:03</sys_updated_on>
+        <table>x_stave_sc_work_order_task</table>
+        <title>Tasks</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": 5,
+		"displayValue": "5"
+	},
+	"order_by": {
+		"value": "",
+		"displayValue": ""
+	},
+	"order_direction": {
+		"value": "",
+		"displayValue": ""
+	},
+	"primary_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"secondary_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"comments_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"id_field": {
+		"value": "parent",
+		"displayValue": "parent"
+	},
+	"close_state": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=3cb8e968dbf12010e2620181ca9619ae"/>
+</record_update>

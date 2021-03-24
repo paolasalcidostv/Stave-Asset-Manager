@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="alm_stockroom" version="2" view="sportal">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="alm_stockroom" element="NULL" name="alm_stockroom" parent="NULL" relationship="NULL" sys_domain="global" view="b4ab64f91bf56c900a2863142a4bcbaa">cbab68f91bf56c900a2863142a4bcb2d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_id>07ab68f91bf56c900a2863142a4bcb2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assignment_group</element>
+            <list_id display_value="alm_stockroom" element="NULL" name="alm_stockroom" parent="NULL" relationship="NULL" sys_domain="global" view="b4ab64f91bf56c900a2863142a4bcbaa">cbab68f91bf56c900a2863142a4bcb2d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_id>87ab68f91bf56c900a2863142a4bcb2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>external</element>
+            <list_id display_value="alm_stockroom" element="NULL" name="alm_stockroom" parent="NULL" relationship="NULL" sys_domain="global" view="b4ab64f91bf56c900a2863142a4bcbaa">cbab68f91bf56c900a2863142a4bcb2d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_id>0bab68f91bf56c900a2863142a4bcb2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>location</element>
+            <list_id display_value="alm_stockroom" element="NULL" name="alm_stockroom" parent="NULL" relationship="NULL" sys_domain="global" view="b4ab64f91bf56c900a2863142a4bcbaa">cbab68f91bf56c900a2863142a4bcb2d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_id>8bab68f91bf56c900a2863142a4bcb2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>manager</element>
+            <list_id display_value="alm_stockroom" element="NULL" name="alm_stockroom" parent="NULL" relationship="NULL" sys_domain="global" view="b4ab64f91bf56c900a2863142a4bcbaa">cbab68f91bf56c900a2863142a4bcb2d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_id>0fab68f91bf56c900a2863142a4bcb2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>type</element>
+            <list_id display_value="alm_stockroom" element="NULL" name="alm_stockroom" parent="NULL" relationship="NULL" sys_domain="global" view="b4ab64f91bf56c900a2863142a4bcbaa">cbab68f91bf56c900a2863142a4bcb2d</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_id>87ab68f91bf56c900a2863142a4bcb92</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>alm_stockroom</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>jason.garcia</sys_created_by>
+            <sys_created_on>2021-01-19 16:50:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cbab68f91bf56c900a2863142a4bcb2d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>alm_stockroom</sys_name>
+            <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+            <sys_update_name>sys_ui_list_alm_stockroom_sportal</sys_update_name>
+            <sys_updated_by>jason.garcia</sys_updated_by>
+            <sys_updated_on>2021-01-19 16:50:49</sys_updated_on>
+            <sys_user/>
+            <view display_value="sportal" name="sportal">b4ab64f91bf56c900a2863142a4bcbaa</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

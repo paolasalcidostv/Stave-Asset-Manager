@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Inventory Management - Container 5</name>
+        <order>5</order>
+        <sp_page display_value="stv_sc_ap_inventory">a043d2721b9ea890348b4113cc4bcb83</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-26 19:15:38</sys_created_on>
+        <sys_id>7e39b80a1b26609067a4a8e82d4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Inventory Management - Container 5</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_container_7e39b80a1b26609067a4a8e82d4bcb2e</sys_update_name>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-26 19:15:38</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_container_7e39b80a1b26609067a4a8e82d4bcb2e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Inventory Management - Container 5</name><order>5</order><sp_page display_value="stv_sc_ap_inventory">a043d2721b9ea890348b4113cc4bcb83</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>jonas.perusquia</sys_created_by><sys_created_on>2021-02-26 19:15:38</sys_created_on><sys_id>7e39b80a1b26609067a4a8e82d4bcb2e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Inventory Management - Container 5</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_container_7e39b80a1b26609067a4a8e82d4bcb2e</sys_update_name><sys_updated_by>jonas.perusquia</sys_updated_by><sys_updated_on>2021-02-26 19:15:38</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-167204342</payload_hash>
+        <record_name>Inventory Management - Container 5</record_name>
+        <reverted_from/>
+        <source>0db041b41b2a285067a4a8e82d4bcb54</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-26 19:15:38</sys_created_on>
+        <sys_id>f639b80a1b26609067a4a8e82d4bcb30</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177dfc4950f0000001</sys_recorded_at>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-26 19:15:38</sys_updated_on>
+        <type>Container</type>
+        <update_guid>fe39b80a2c2660905e61b9b1a5d15f2f</update_guid>
+        <update_guid_history>fe39b80a2c2660905e61b9b1a5d15f2f:-167204342</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">4349f80a1b26609067a4a8e82d4bcb00</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-26 19:15:55</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>2029628159fc423c853f6a22cc411510</sys_id>
+        <sys_metadata>7e39b80a1b26609067a4a8e82d4bcb2e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Inventory Management - Container 5</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_container_7e39b80a1b26609067a4a8e82d4bcb2e</sys_update_name>
+        <sys_update_version display_value="sp_container_7e39b80a1b26609067a4a8e82d4bcb2e">f639b80a1b26609067a4a8e82d4bcb30</sys_update_version>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-02-26 19:15:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

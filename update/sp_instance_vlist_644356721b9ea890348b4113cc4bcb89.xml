@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>active</display_field>
+        <field_list/>
+        <filter/>
+        <glyph>th-list</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">644356721b9ea890348b4113cc4bcb87</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Stave Chart">2480f7bfdb123b4094ea6693ca961954</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>jonas.perusquia</sys_created_by>
+        <sys_created_on>2021-02-16 23:28:43</sys_created_on>
+        <sys_id>644356721b9ea890348b4113cc4bcb89</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Transfer Orders by Stage</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_vlist_644356721b9ea890348b4113cc4bcb89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-17 22:08:02</sys_updated_on>
+        <table>x_stave_sc_transfer_order</table>
+        <title>Transfer Orders by Stage</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"id_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"background_colors": {
+		"value": "#0083bf, #00c3a2, #00a6c9, #66d65c, #ebd900, #1f2fbf, #b0009b, #e42970, #f26a52, #eba250",
+		"displayValue": "#0083bf, #00c3a2, #00a6c9, #66d65c, #ebd900, #1f2fbf, #b0009b, #e42970, #f26a52, #eba250"
+	},
+	"group_by": {
+		"value": "stage",
+		"displayValue": "stage"
+	},
+	"group_count": {
+		"value": "",
+		"displayValue": ""
+	},
+	"sum_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"dot_walk_table_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"form_page_id": {
+		"value": "stv_sc_new_request",
+		"displayValue": "stv_sc_new_request"
+	},
+	"title_alignment": {
+		"value": "",
+		"displayValue": ""
+	},
+	"roles": {
+		"value": "",
+		"displayValue": ""
+	},
+	"chart_theme": {
+		"value": "9b87b647dbc9505094ea6693ca961917",
+		"displayValue": "A Theme"
+	},
+	"type": {
+		"value": "pie",
+		"displayValue": "pie"
+	},
+	"filter_by_range": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_range": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="delete_multiple" query="documentkey=644356721b9ea890348b4113cc4bcb89"/>
+</record_update>

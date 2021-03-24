@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">58f8a4db1bc22410b521a9722a4bcb8a</sp_column>
+        <sp_widget display_value="Related list">07e04283db0e7700f99a41deaa9619d6</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>ilse.hernandez</sys_created_by>
+        <sys_created_on>2021-02-05 18:45:37</sys_created_on>
+        <sys_id>56f8e4db1bc22410b521a9722a4bcb30</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Transfer Order Line Tasks</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_56f8e4db1bc22410b521a9722a4bcb30</sys_update_name>
+        <sys_updated_by>ilse.hernandez</sys_updated_by>
+        <sys_updated_on>2021-02-05 18:55:13</sys_updated_on>
+        <title>Transfer Order Line Tasks</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"table": {
+		"value": "x_stave_sc_transfer_order_line_task",
+		"displayValue": "x_stave_sc_transfer_order_line_task"
+	},
+	"reference_field": {
+		"value": "transfer_order_line",
+		"displayValue": "transfer_order_line"
+	},
+	"query": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"page_id": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hide_new": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"open_list_item_in_modal": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"create_new_in_modal": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"new_record_modal_widget": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_edit": {
+		"value": "",
+		"displayValue": ""
+	},
+	"edit_widget": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_display_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_display_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_search_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"static_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"target_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_table_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"conditional_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_button_conditions": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_view": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"filter_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"order_by_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"order_by": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_page_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_personalize_list": {
+		"value": "",
+		"displayValue": ""
+	},
+	"parent_table": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=56f8e4db1bc22410b521a9722a4bcb30"/>
+</record_update>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Inventory Management - Container 2">a0dba49fdbe66c100e9c71f2399619c4</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-02 15:55:41</sys_created_on>
+        <sys_id>01d13817db2a6c100e9c71f23996191a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_row_01d13817db2a6c100e9c71f23996191a</sys_update_name>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-02 15:55:41</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>79f1e71bdbd0ef04b2e05d00cf961953</instance_id>
+        <instance_name>ven02656</instance_name>
+        <name>sp_row_01d13817db2a6c100e9c71f23996191a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>1</order><sp_column/><sp_container display_value="Inventory Management - Container 2">a0dba49fdbe66c100e9c71f2399619c4</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>daniel.molina</sys_created_by><sys_created_on>2021-03-02 15:55:41</sys_created_on><sys_id>01d13817db2a6c100e9c71f23996191a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_row_01d13817db2a6c100e9c71f23996191a</sys_update_name><sys_updated_by>daniel.molina</sys_updated_by><sys_updated_on>2021-03-02 15:55:41</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>-1527526864</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>60f7fb3adb662c100e9c71f2399619e4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-02 15:55:41</sys_created_on>
+        <sys_id>81d17097db2a6c100e9c71f2399619b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177f3a6f6160000001</sys_recorded_at>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-02 15:55:41</sys_updated_on>
+        <type>Row</type>
+        <update_guid>41d13817a32a6c10a5348eea870de61b</update_guid>
+        <update_guid_history>41d13817a32a6c10a5348eea870de61b:-1527526864</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">b0b27c97db2a6c100e9c71f239961933</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-02 15:59:30</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>169ca6d2ae124a72897d8756da18b524</sys_id>
+        <sys_metadata>01d13817db2a6c100e9c71f23996191a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_row_01d13817db2a6c100e9c71f23996191a</sys_update_name>
+        <sys_update_version display_value="sp_row_01d13817db2a6c100e9c71f23996191a">81d17097db2a6c100e9c71f2399619b6</sys_update_version>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-02 15:59:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
