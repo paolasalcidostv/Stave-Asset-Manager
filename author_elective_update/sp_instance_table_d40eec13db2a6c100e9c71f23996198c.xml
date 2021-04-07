@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>number,short_description,price,approval,opened_at,due_date,opened_by</field_list>
+        <filter table="sc_request">sourceable=true^sourced=false<item endquery="false" field="sourceable" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="sourced" goto="false" newquery="false" operator="=" or="false" value="false"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>3</maximum_entries>
+        <order>2</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1f1334d7db2a6c100e9c71f239961984</sp_column>
+        <sp_page/>
+        <sp_widget display_value="STV Data Table from Instance Definition">583bb8901b6d9010f290997fbd4bcbf6</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-02 15:38:59</sys_created_on>
+        <sys_id>d40eec13db2a6c100e9c71f23996198c</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Open Requests</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_table_d40eec13db2a6c100e9c71f23996198c</sys_update_name>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-03-31 22:28:07</sys_updated_on>
+        <table>sc_request</table>
+        <title>Open Requests</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=d40eec13db2a6c100e9c71f23996198c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>6d7935fadbd99f44b2e05d00cf961994</instance_id>
+        <instance_name>ven02473</instance_name>
+        <name>sp_instance_table_d40eec13db2a6c100e9c71f23996198c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_table"&gt;&lt;sp_instance_table action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field/&gt;&lt;field_list&gt;number,short_description,price,approval,opened_at,due_date,opened_by&lt;/field_list&gt;&lt;filter table="sc_request"&gt;sourceable=true^sourced=false&lt;item endquery="false" field="sourceable" goto="false" newquery="false" operator="=" or="false" value="true"/&gt;&lt;item endquery="false" field="sourced" goto="false" newquery="false" operator="=" or="false" value="false"/&gt;&lt;/filter&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;maximum_entries&gt;3&lt;/maximum_entries&gt;&lt;order&gt;2&lt;/order&gt;&lt;order_by/&gt;&lt;order_direction&gt;asc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;1f1334d7db2a6c100e9c71f239961984&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="STV Data Table from Instance Definition"&gt;583bb8901b6d9010f290997fbd4bcbf6&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_table&lt;/sys_class_name&gt;&lt;sys_created_by&gt;daniel.molina&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-02 15:38:59&lt;/sys_created_on&gt;&lt;sys_id&gt;d40eec13db2a6c100e9c71f23996198c&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_name&gt;Open Requests&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_table_d40eec13db2a6c100e9c71f23996198c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;paola.salcido&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-31 22:28:07&lt;/sys_updated_on&gt;&lt;table&gt;sc_request&lt;/table&gt;&lt;title&gt;Open Requests&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"show_export": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_breadcrumbs": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"show_keywords": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_table&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=d40eec13db2a6c100e9c71f23996198c"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1526473098</payload_hash>
+        <record_name>Open Requests</record_name>
+        <reverted_from/>
+        <source>744d98c3db4b6010f24c5e25ca96197c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-03-31 22:28:07</sys_created_on>
+        <sys_id>90c1a7acdb5f6410f24c5e25ca9619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1788a66abf20000001</sys_recorded_at>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-03-31 22:28:07</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>98c1a7ac855f6410f316790ff9c9ccd6</update_guid>
+        <update_guid_history>98c1a7ac855f6410f316790ff9c9ccd6:1526473098,4c94ab4a6a83a81021f4725053923923:0,690bdf0ec643a81060f2064baf01c44e:-1224557453,68f71f426243a810957e496cc5421669:-388344994</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Open Requests">ab322facdb5f6410f24c5e25ca961928</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-03-31 22:30:16</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>004618d5b8ec4400800090e8adb24400</sys_id>
+        <sys_metadata>d40eec13db2a6c100e9c71f23996198c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open Requests</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_table_d40eec13db2a6c100e9c71f23996198c</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_d40eec13db2a6c100e9c71f23996198c">90c1a7acdb5f6410f24c5e25ca9619d7</sys_update_version>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-03-31 22:30:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="9005b77bdbcfe010f24c5e25ca961988" sys_domain="global" table="x_stave_sc_transfer_order" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:56:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1405b77bdbcfe010f24c5e25ca96198a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_stave_sc_transfer_order" name="x_stave_sc_transfer_order" sys_domain="global" view="2558efbfdb8fe010f24c5e25ca9619b9">9005b77bdbcfe010f24c5e25ca961988</sys_ui_form>
+            <sys_ui_section caption="Transfer Order" display_value="Transfer Order" name="x_stave_sc_transfer_order" sys_domain="global" view="2558efbfdb8fe010f24c5e25ca9619b9">d005b77bdbcfe010f24c5e25ca961983</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:56:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:56:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d005b77bdbcfe010f24c5e25ca96198b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_stave_sc_transfer_order" name="x_stave_sc_transfer_order" sys_domain="global" view="2558efbfdb8fe010f24c5e25ca9619b9">9005b77bdbcfe010f24c5e25ca961988</sys_ui_form>
+            <sys_ui_section caption="Summary" display_value="Summary" name="x_stave_sc_transfer_order" sys_domain="global" view="2558efbfdb8fe010f24c5e25ca9619b9">6158efbfdb8fe010f24c5e25ca9619be</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:56:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_stave_sc_transfer_order</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:56:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9005b77bdbcfe010f24c5e25ca961988</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_stave_sc_transfer_order</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+            <sys_update_name>sys_ui_form_sections_9005b77bdbcfe010f24c5e25ca961988</sys_update_name>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:56:47</sys_updated_on>
+            <sys_user/>
+            <view display_value="To Location" name="to_location">2558efbfdb8fe010f24c5e25ca9619b9</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

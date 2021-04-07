@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>stave_tol</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-03-30 19:48:15</sys_created_on>
+        <sys_id>309375dcdbdf2410f24c5e25ca961938</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Stave TOL</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sys_ui_view_309375dcdbdf2410f24c5e25ca961938</sys_update_name>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-03-30 19:48:15</sys_updated_on>
+        <title>Stave TOL</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

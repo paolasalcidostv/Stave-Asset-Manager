@@ -8,6 +8,7 @@
         <internal>false</internal>
         <public>false</public>
         <roles>x_stave_sc.asset_user</roles>
+        <seo_script/>
         <short_description/>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>ilse.hernandez</sys_created_by>
@@ -22,6 +23,7 @@
         <sys_updated_by>ilse.hernandez</sys_updated_by>
         <sys_updated_on>2021-02-05 18:44:09</sys_updated_on>
         <title>Transfer Order Line</title>
+        <use_seo_script>false</use_seo_script>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=c948a49b1bc22410b521a9722a4bcb7f"/>
 </record_update>

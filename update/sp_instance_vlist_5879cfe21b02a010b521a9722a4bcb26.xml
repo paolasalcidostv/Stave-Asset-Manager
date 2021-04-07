@@ -5,7 +5,7 @@
         <color>default</color>
         <css/>
         <display_field/>
-        <field_list>number,stage,from_stockroom,to_stockroom,from_location,to_location,requested_date,delivery_by_date,drop_off,delivery_method</field_list>
+        <field_list/>
         <filter/>
         <glyph/>
         <id/>
@@ -23,29 +23,29 @@
         <sys_created_by>ilse.hernandez</sys_created_by>
         <sys_created_on>2021-02-03 22:31:16</sys_created_on>
         <sys_id>5879cfe21b02a010b521a9722a4bcb26</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Summary</sys_name>
         <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
         <sys_update_name>sp_instance_vlist_5879cfe21b02a010b521a9722a4bcb26</sys_update_name>
-        <sys_updated_by>ilse.hernandez</sys_updated_by>
-        <sys_updated_on>2021-02-03 22:37:33</sys_updated_on>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-03-29 16:24:36</sys_updated_on>
         <table>x_stave_sc_transfer_order</table>
         <title>Summary</title>
         <url/>
         <widget_parameters><![CDATA[{
 	"field_list": {
-		"value": "number,stage,from_stockroom,to_stockroom,from_location,to_location,requested_date,delivery_by_date,drop_off,delivery_method",
-		"displayValue": "number,stage,from_stockroom,to_stockroom,from_location,to_location,requested_date,delivery_by_date,drop_off,delivery_method"
+		"value": "",
+		"displayValue": ""
 	},
 	"title": {
 		"value": "Summary",
 		"displayValue": "Summary"
 	},
 	"header_field": {
-		"value": "request_state",
-		"displayValue": "request_state"
+		"value": "stage",
+		"displayValue": "stage"
 	},
 	"image": {
 		"value": "",
@@ -64,28 +64,28 @@
 		"displayValue": "true"
 	},
 	"section": {
-		"value": null,
-		"displayValue": ""
+		"value": 2,
+		"displayValue": "2"
 	},
 	"form_view": {
-		"value": "false",
-		"displayValue": "false"
+		"value": "true",
+		"displayValue": "true"
 	},
 	"help_text": {
-		"value": "",
-		"displayValue": ""
+		"value": "true",
+		"displayValue": "true"
 	},
 	"help_text_view": {
-		"value": "",
-		"displayValue": ""
+		"value": "reference_field_preview",
+		"displayValue": "reference_field_preview"
 	},
 	"clickable_referenced_fields": {
-		"value": "",
-		"displayValue": ""
+		"value": "request",
+		"displayValue": "request"
 	},
 	"service_portal_urls_table": {
-		"value": "",
-		"displayValue": ""
+		"value": "3edf524edb41dc1094ea6693ca9619d1",
+		"displayValue": "Service Portal URL"
 	},
 	"translated_html": {
 		"value": "",

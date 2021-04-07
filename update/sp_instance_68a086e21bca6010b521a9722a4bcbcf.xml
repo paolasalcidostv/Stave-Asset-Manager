@@ -16,14 +16,14 @@
         <sys_created_by>ilse.hernandez</sys_created_by>
         <sys_created_on>2021-02-03 17:13:09</sys_created_on>
         <sys_id>68a086e21bca6010b521a9722a4bcbcf</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Transfer Order Lines</sys_name>
         <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
         <sys_update_name>sp_instance_68a086e21bca6010b521a9722a4bcbcf</sys_update_name>
         <sys_updated_by>jonas.perusquia</sys_updated_by>
-        <sys_updated_on>2021-02-18 00:57:52</sys_updated_on>
+        <sys_updated_on>2021-03-30 23:18:17</sys_updated_on>
         <title>Transfer Order Lines</title>
         <url/>
         <widget_parameters><![CDATA[{
@@ -40,8 +40,8 @@
 		"displayValue": ""
 	},
 	"view": {
-		"value": "stave_tol_new",
-		"displayValue": "stave_tol_new"
+		"value": "stave_tol",
+		"displayValue": "stave_tol"
 	},
 	"page_id": {
 		"value": "stv_am_transfer_order_line",
@@ -134,6 +134,10 @@
 	"parent_table": {
 		"value": "x_stave_sc_transfer_order",
 		"displayValue": "x_stave_sc_transfer_order"
+	},
+	"ignore_reference_parameters": {
+		"value": "true",
+		"displayValue": "true"
 	}
 }]]></widget_parameters>
     </sp_instance>

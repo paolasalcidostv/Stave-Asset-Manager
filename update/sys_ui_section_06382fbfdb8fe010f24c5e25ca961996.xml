@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="06382fbfdb8fe010f24c5e25ca961996" sys_domain="global" table="x_stave_sc_transfer_order" version="3" view="to_new">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>9d7a6f33dbcfe010f24c5e25ca9619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>1</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>157a6f33dbcfe010f24c5e25ca9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>request</element>
+            <position>2</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>997a6f33dbcfe010f24c5e25ca9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_for</element>
+            <position>3</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>117a6f33dbcfe010f24c5e25ca9619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_date</element>
+            <position>4</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>957a6f33dbcfe010f24c5e25ca9619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>1d7a6f33dbcfe010f24c5e25ca9619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>from_stockroom</element>
+            <position>6</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>917a6f33dbcfe010f24c5e25ca9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>from_location</element>
+            <position>7</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>197a6f33dbcfe010f24c5e25ca9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>destination</element>
+            <position>8</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>9d7a6f33dbcfe010f24c5e25ca9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>to_stockroom</element>
+            <position>9</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>157a6f33dbcfe010f24c5e25ca9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>to_location</element>
+            <position>10</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>997a6f33dbcfe010f24c5e25ca9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>dest_address</element>
+            <position>11</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>117a6f33dbcfe010f24c5e25ca9619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>dest_department</element>
+            <position>12</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>957a6f33dbcfe010f24c5e25ca9619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>delivery_by_date</element>
+            <position>13</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>1d7a6f33dbcfe010f24c5e25ca9619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>delivery_method</element>
+            <position>14</position>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:10:43</sys_created_on>
+            <sys_id>917a6f33dbcfe010f24c5e25ca9619bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_stave_sc_transfer_order" sys_domain="global" view="c2382fbfdb8fe010f24c5e25ca961991">06382fbfdb8fe010f24c5e25ca961996</sys_ui_section>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:10:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_stave_sc_transfer_order</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>paola.salcido</sys_created_by>
+            <sys_created_on>2021-03-29 15:00:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06382fbfdb8fe010f24c5e25ca961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_stave_sc_transfer_order</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+            <sys_update_name>sys_ui_section_06382fbfdb8fe010f24c5e25ca961996</sys_update_name>
+            <sys_updated_by>paola.salcido</sys_updated_by>
+            <sys_updated_on>2021-03-29 15:00:56</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="New Transfer Order" name="to_new">c2382fbfdb8fe010f24c5e25ca961991</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
