@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="test page - Container 1">c063c57adb036010f24c5e25ca96196d</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-26 00:26:49</sys_created_on>
+        <sys_id>1063457adb036010f24c5e25ca9619d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_row_1063457adb036010f24c5e25ca9619d6</sys_update_name>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-26 00:26:49</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>6d7935fadbd99f44b2e05d00cf961994</instance_id>
+        <instance_name>ven02473</instance_name>
+        <name>sp_row_1063457adb036010f24c5e25ca9619d6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>1</order><sp_column/><sp_container display_value="test page - Container 1">c063c57adb036010f24c5e25ca96196d</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>daniel.molina</sys_created_by><sys_created_on>2021-03-26 00:26:49</sys_created_on><sys_id>1063457adb036010f24c5e25ca9619d6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_row_1063457adb036010f24c5e25ca9619d6</sys_update_name><sys_updated_by>daniel.molina</sys_updated_by><sys_updated_on>2021-03-26 00:26:49</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>2123130435</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>92a1c9f6db036010f24c5e25ca961975</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-26 00:26:49</sys_created_on>
+        <sys_id>d063457adb036010f24c5e25ca9619d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1786bed2eab0000001</sys_recorded_at>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-26 00:26:49</sys_updated_on>
+        <type>Row</type>
+        <update_guid>d863457a4f03601069bac1dad9f9a6d7</update_guid>
+        <update_guid_history>d863457a4f03601069bac1dad9f9a6d7:2123130435</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">b20c0375db7b2c50f24c5e25ca96199b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-29 14:37:04</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>144a2379c0a5435ca0a8fb99a9eaebc9</sys_id>
+        <sys_metadata>1063457adb036010f24c5e25ca9619d6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_row_1063457adb036010f24c5e25ca9619d6</sys_update_name>
+        <sys_update_version display_value="sp_row_1063457adb036010f24c5e25ca9619d6">d063457adb036010f24c5e25ca9619d8</sys_update_version>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-29 14:37:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

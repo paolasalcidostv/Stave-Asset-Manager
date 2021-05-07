@@ -18,16 +18,16 @@
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_stave_am</source>
-        <store_correlation_id/>
-        <store_url/>
+        <store_correlation_id>REPOAPP0000388383</store_correlation_id>
+        <store_url>https://tpp.servicenow.com/sn_appstore_s</store_url>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>ilse.hernandez</sys_created_by>
         <sys_created_on>2021-01-15 22:52:02</sys_created_on>
         <sys_id>53f715ecdbf568d0f24c5e25ca9619b7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>paola.salcido</sys_updated_by>
-        <sys_updated_on>2021-01-15 23:09:25</sys_updated_on>
+        <sys_updated_on>2021-05-07 23:50:32</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>

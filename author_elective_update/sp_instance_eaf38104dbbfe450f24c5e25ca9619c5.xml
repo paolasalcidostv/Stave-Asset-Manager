@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">82e34104dbbfe450f24c5e25ca9619e9</sp_column>
+        <sp_widget display_value="Related list">07e04283db0e7700f99a41deaa9619d6</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-23 18:13:13</sys_created_on>
+        <sys_id>eaf38104dbbfe450f24c5e25ca9619c5</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Transfer Orders</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_instance_eaf38104dbbfe450f24c5e25ca9619c5</sys_update_name>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-23 18:26:16</sys_updated_on>
+        <title>Transfer Orders</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"table": {
+		"value": "x_stave_sc_transfer_order",
+		"displayValue": "x_stave_sc_transfer_order"
+	},
+	"reference_field": {
+		"value": "sys_id",
+		"displayValue": "sys_id"
+	},
+	"query": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"page_id": {
+		"value": "stv_am_transfer_order",
+		"displayValue": "stv_am_transfer_order"
+	},
+	"new_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hide_new": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"open_list_item_in_modal": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"create_new_in_modal": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"new_record_modal_widget": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_edit": {
+		"value": "",
+		"displayValue": ""
+	},
+	"edit_widget": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_display_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_display_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_search_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"static_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"target_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_table_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"conditional_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_button_conditions": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_view": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"filter_field": {
+		"value": "transfer_order",
+		"displayValue": "transfer_order"
+	},
+	"order_by_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"order_by": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_page_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_personalize_list": {
+		"value": "",
+		"displayValue": ""
+	},
+	"parent_table": {
+		"value": "",
+		"displayValue": ""
+	},
+	"ignore_reference_parameters": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=eaf38104dbbfe450f24c5e25ca9619c5"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>6d7935fadbd99f44b2e05d00cf961994</instance_id>
+        <instance_name>ven02473</instance_name>
+        <name>sp_instance_eaf38104dbbfe450f24c5e25ca9619c5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;82e34104dbbfe450f24c5e25ca9619e9&lt;/sp_column&gt;&lt;sp_widget display_value="Related list"&gt;07e04283db0e7700f99a41deaa9619d6&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;paola.salcido&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-04-23 18:13:13&lt;/sys_created_on&gt;&lt;sys_id&gt;eaf38104dbbfe450f24c5e25ca9619c5&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;Transfer Orders&lt;/sys_name&gt;&lt;sys_package display_value="Stave Asset Manager" source="x_stave_am"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Stave Asset Manager"&gt;53f715ecdbf568d0f24c5e25ca9619b7&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_eaf38104dbbfe450f24c5e25ca9619c5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;paola.salcido&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-23 18:26:16&lt;/sys_updated_on&gt;&lt;title&gt;Transfer Orders&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"table": {
+		"value": "x_stave_sc_transfer_order",
+		"displayValue": "x_stave_sc_transfer_order"
+	},
+	"reference_field": {
+		"value": "sys_id",
+		"displayValue": "sys_id"
+	},
+	"query": {
+		"value": "",
+		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"page_id": {
+		"value": "stv_am_transfer_order",
+		"displayValue": "stv_am_transfer_order"
+	},
+	"new_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hide_new": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"open_list_item_in_modal": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"create_new_in_modal": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"new_record_modal_widget": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_edit": {
+		"value": "",
+		"displayValue": ""
+	},
+	"edit_widget": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_display_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_display_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_search_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"static_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"target_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"picker_table_name": {
+		"value": "",
+		"displayValue": ""
+	},
+	"conditional_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_button_conditions": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_view": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"filter_field": {
+		"value": "transfer_order",
+		"displayValue": "transfer_order"
+	},
+	"order_by_field": {
+		"value": "",
+		"displayValue": ""
+	},
+	"order_by": {
+		"value": "",
+		"displayValue": ""
+	},
+	"new_page_view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_personalize_list": {
+		"value": "",
+		"displayValue": ""
+	},
+	"parent_table": {
+		"value": "",
+		"displayValue": ""
+	},
+	"ignore_reference_parameters": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=eaf38104dbbfe450f24c5e25ca9619c5"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1823883011</payload_hash>
+        <record_name>Transfer Orders</record_name>
+        <reverted_from/>
+        <source>744d98c3db4b6010f24c5e25ca96197c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-23 18:26:16</sys_created_on>
+        <sys_id>adf641c4dbbfe450f24c5e25ca9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178fffb83170000001</sys_recorded_at>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-23 18:26:16</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>25f641c49bbfe450b2d92eaae3559ec2</update_guid>
+        <update_guid_history>25f641c49bbfe450b2d92eaae3559ec2:1823883011,bd76898465bfe450cee855330b0c0c10:1986708633,a9664d8456bfe4504d0b1290e7a26bfb:1586377127,5d854184dfbfe450b47a0ca73bd91e93:-1199246247,eba4c54451bfe4507f3079cfdea09b72:212820289,8f848144b0bfe45077e6a9ecb7c68d9f:1758525274,e6f38104d5bfe45011a9d601d9b4b8c7:-1822557205</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Transfer Orders">a9206801db37a850f24c5e25ca9619ff</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-26 18:10:37</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>35fc4cc424234e4096d1f45ef005f384</sys_id>
+        <sys_metadata>eaf38104dbbfe450f24c5e25ca9619c5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transfer Orders</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_instance_eaf38104dbbfe450f24c5e25ca9619c5</sys_update_name>
+        <sys_update_version display_value="sp_instance_eaf38104dbbfe450f24c5e25ca9619c5">adf641c4dbbfe450f24c5e25ca9619c2</sys_update_version>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-26 18:10:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -5,7 +5,7 @@
         <color>default</color>
         <css/>
         <display_field/>
-        <field_list/>
+        <field_list>number,transfer_order,address,assigned_to,courier,tracking_number,stockroom,location,ship_date,unit_system,weight,length,height,width,item_quantity</field_list>
         <filter/>
         <glyph/>
         <id/>
@@ -23,29 +23,29 @@
         <sys_created_by>ilse.hernandez</sys_created_by>
         <sys_created_on>2021-02-18 00:44:43</sys_created_on>
         <sys_id>733eab0f1b9ea050b521a9722a4bcbde</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Summary</sys_name>
         <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
         <sys_update_name>sp_instance_vlist_733eab0f1b9ea050b521a9722a4bcbde</sys_update_name>
-        <sys_updated_by>ilse.hernandez</sys_updated_by>
-        <sys_updated_on>2021-02-19 01:22:07</sys_updated_on>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-28 13:54:24</sys_updated_on>
         <table>x_stave_sc_transfer_order_package</table>
         <title>Summary</title>
         <url/>
         <widget_parameters><![CDATA[{
 	"field_list": {
-		"value": "",
-		"displayValue": ""
+		"value": "number,transfer_order,address,assigned_to,courier,tracking_number,stockroom,location,ship_date,unit_system,weight,length,height,width,item_quantity",
+		"displayValue": "number,transfer_order,address,assigned_to,courier,tracking_number,stockroom,location,ship_date,unit_system,weight,length,height,width,item_quantity"
 	},
 	"title": {
 		"value": "Summary",
 		"displayValue": "Summary"
 	},
 	"header_field": {
-		"value": "",
-		"displayValue": ""
+		"value": "stage",
+		"displayValue": "stage"
 	},
 	"image": {
 		"value": "",
@@ -68,28 +68,36 @@
 		"displayValue": ""
 	},
 	"form_view": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"help_text": {
 		"value": "true",
 		"displayValue": "true"
 	},
-	"help_text": {
-		"value": "",
-		"displayValue": ""
-	},
 	"help_text_view": {
-		"value": "",
-		"displayValue": ""
+		"value": "help_text",
+		"displayValue": "help_text"
 	},
 	"clickable_referenced_fields": {
-		"value": "",
-		"displayValue": ""
+		"value": "transfer_order,assigned_to",
+		"displayValue": "transfer_order,assigned_to"
 	},
 	"service_portal_urls_table": {
-		"value": "",
-		"displayValue": ""
+		"value": "3edf524edb41dc1094ea6693ca9619d1",
+		"displayValue": "Service Portal URL"
 	},
 	"translated_html": {
 		"value": "",
 		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"run_scripts": {
+		"value": "false",
+		"displayValue": "false"
 	}
 }]]></widget_parameters>
     </sp_instance_vlist>

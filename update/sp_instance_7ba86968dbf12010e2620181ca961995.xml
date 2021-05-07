@@ -11,7 +11,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">33a86968dbf12010e2620181ca961994</sp_column>
-        <sp_widget display_value="Next Activity">e3d18f4cdb57b70094ea6693ca961994</sp_widget>
+        <sp_widget display_value="Stave Next Activity">e3d18f4cdb57b70094ea6693ca961994</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-01-16 00:04:58</sys_created_on>

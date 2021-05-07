@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>test page - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="test_page">d6b2493adb036010f24c5e25ca961965</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-26 00:26:41</sys_created_on>
+        <sys_id>de53857adb036010f24c5e25ca96199c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>test page - Container 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_container_de53857adb036010f24c5e25ca96199c</sys_update_name>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-26 00:26:47</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>6d7935fadbd99f44b2e05d00cf961994</instance_id>
+        <instance_name>ven02473</instance_name>
+        <name>sp_container_de53857adb036010f24c5e25ca96199c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>test page - Container 2</name><order>2</order><sp_page display_value="test_page">d6b2493adb036010f24c5e25ca961965</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>daniel.molina</sys_created_by><sys_created_on>2021-03-26 00:26:41</sys_created_on><sys_id>de53857adb036010f24c5e25ca96199c</sys_id><sys_mod_count>1</sys_mod_count><sys_name>test page - Container 2</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_container_de53857adb036010f24c5e25ca96199c</sys_update_name><sys_updated_by>daniel.molina</sys_updated_by><sys_updated_on>2021-03-26 00:26:47</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-62506687</payload_hash>
+        <record_name>test page - Container 2</record_name>
+        <reverted_from/>
+        <source>92a1c9f6db036010f24c5e25ca961975</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.molina</sys_created_by>
+        <sys_created_on>2021-03-26 00:26:47</sys_created_on>
+        <sys_id>4863c57adb036010f24c5e25ca961971</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1786bed28ca0000001</sys_recorded_at>
+        <sys_updated_by>daniel.molina</sys_updated_by>
+        <sys_updated_on>2021-03-26 00:26:47</sys_updated_on>
+        <type>Container</type>
+        <update_guid>cc63c57a82036010a773666b56c86b70</update_guid>
+        <update_guid_history>cc63c57a82036010a773666b56c86b70:-62506687,5253857ad90360102b9f9b984d25709f:-1523315360</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="test page - Container 2">b20c0375db7b2c50f24c5e25ca9619a5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-29 14:37:04</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>0ea98cfe46ca4640842363ddde5f6fa4</sys_id>
+        <sys_metadata>de53857adb036010f24c5e25ca96199c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test page - Container 2</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_container_de53857adb036010f24c5e25ca96199c</sys_update_name>
+        <sys_update_version display_value="sp_container_de53857adb036010f24c5e25ca96199c">4863c57adb036010f24c5e25ca961971</sys_update_version>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-29 14:37:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

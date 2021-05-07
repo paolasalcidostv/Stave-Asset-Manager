@@ -25,17 +25,17 @@
         <sys_created_by>ilse.hernandez</sys_created_by>
         <sys_created_on>2021-01-19 23:38:26</sys_created_on>
         <sys_id>220802311bf1ec901784fd9c0a4bcb53</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Asset Classes</sys_name>
         <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
         <sys_update_name>sp_rectangle_menu_item_220802311bf1ec901784fd9c0a4bcb53</sys_update_name>
-        <sys_updated_by>ilse.hernandez</sys_updated_by>
-        <sys_updated_on>2021-01-19 23:47:17</sys_updated_on>
+        <sys_updated_by>jonas.perusquia</sys_updated_by>
+        <sys_updated_on>2021-03-26 01:14:53</sys_updated_on>
         <table/>
         <type>url</type>
-        <url>?id=stv_ap_list&amp;table=x_stave_sc_asset_class_choices&amp;filter=&amp;sTitle=Asset%20Classes&amp;target_page_id=stv_sc_form&amp;referringUrl=%3Fid%3Dstv_sc_configuration&amp;refVal=Configuration</url>
+        <url>?id=stv_ap_list&amp;table=x_stave_sc_asset_class_choices&amp;filter=&amp;sTitle=Asset%20Classes&amp;target_page_id=stv_sc_form</url>
         <url_target/>
     </sp_rectangle_menu_item>
     <sys_translated_text action="delete_multiple" query="documentkey=220802311bf1ec901784fd9c0a4bcb53"/>

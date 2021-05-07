@@ -4,13 +4,13 @@
             <element>stage</element>
             <position>0</position>
             <sys_created_by>paola.salcido</sys_created_by>
-            <sys_created_on>2021-03-29 15:56:47</sys_created_on>
-            <sys_id>9005b77bdbcfe010f24c5e25ca96199b</sys_id>
+            <sys_created_on>2021-04-28 21:13:32</sys_created_on>
+            <sys_id>6c3dd761db332c50f24c5e25ca961981</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Transfer Order" display_value="Transfer Order" name="x_stave_sc_transfer_order" sys_domain="global" view="2558efbfdb8fe010f24c5e25ca9619b9">d005b77bdbcfe010f24c5e25ca961983</sys_ui_section>
             <sys_updated_by>paola.salcido</sys_updated_by>
-            <sys_updated_on>2021-03-29 15:56:47</sys_updated_on>
+            <sys_updated_on>2021-04-28 21:13:32</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -19,7 +19,7 @@
         <size>md</size>
         <sp_column display_value="2">fcb8e968dbf12010e2620181ca96199e</sp_column>
         <sp_page/>
-        <sp_widget display_value="Task List">9e39a470db9e7b00f99a41deaa961973</sp_widget>
+        <sp_widget display_value="Stave Task List">9e39a470db9e7b00f99a41deaa961973</sp_widget>
         <sys_class_name>sp_instance_vlist</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-01-16 00:05:03</sys_created_on>

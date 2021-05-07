@@ -12,31 +12,31 @@
         <kb_article/>
         <kb_category/>
         <kb_topic/>
-        <label>Transfer Order Packed Assets</label>
+        <label>Transfer Orders</label>
         <order>100</order>
         <record_script/>
         <sc_cat_item/>
         <sc_category/>
-        <short_description>.to-asset-packed</short_description>
+        <short_description>.tos</short_description>
         <sp_page/>
-        <sp_rectangle_menu display_value="">ad30cea21bca6010b521a9722a4bcbab</sp_rectangle_menu>
+        <sp_rectangle_menu/>
         <sp_rectangle_menu_item/>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>
-        <sys_created_by>ilse.hernandez</sys_created_by>
-        <sys_created_on>2021-02-03 17:18:34</sys_created_on>
-        <sys_id>19c14a261bca6010b521a9722a4bcb2f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Transfer Order Packed Assets</sys_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-23 18:24:57</sys_created_on>
+        <sys_id>e89601c4dbbfe450f24c5e25ca961968</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transfer Orders</sys_name>
         <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
-        <sys_update_name>sp_rectangle_menu_item_19c14a261bca6010b521a9722a4bcb2f</sys_update_name>
-        <sys_updated_by>ilse.hernandez</sys_updated_by>
-        <sys_updated_on>2021-02-03 17:20:55</sys_updated_on>
+        <sys_update_name>sp_rectangle_menu_item_e89601c4dbbfe450f24c5e25ca961968</sys_update_name>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-23 18:24:57</sys_updated_on>
         <table/>
         <type>url</type>
         <url/>
         <url_target/>
     </sp_rectangle_menu_item>
-    <sys_translated_text action="delete_multiple" query="documentkey=19c14a261bca6010b521a9722a4bcb2f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=e89601c4dbbfe450f24c5e25ca961968"/>
 </record_update>

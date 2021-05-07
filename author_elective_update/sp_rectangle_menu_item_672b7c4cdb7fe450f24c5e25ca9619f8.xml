@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="DELETE">
+        <active>true</active>
+        <color>default</color>
+        <condition>gs.hasRole('x_stave_sc.inventory_manager')||gs.hasRole('x_stave_sc.warehouse')</condition>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>dropbox</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>Packages</label>
+        <order>250</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page/>
+        <sp_rectangle_menu display_value="Inventory Management">4fcae9e8dbf12010e2620181ca9619db</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-23 17:34:47</sys_created_on>
+        <sys_id>672b7c4cdb7fe450f24c5e25ca9619f8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Packages</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_672b7c4cdb7fe450f24c5e25ca9619f8</sys_update_name>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-23 17:38:35</sys_updated_on>
+        <table/>
+        <type>url</type>
+        <url>?id=stv_ap_list&amp;table=x_stave_sc_transfer_order_package&amp;filter=&amp;o=sys_created_on&amp;d=desc&amp;target_page_id=stv_am_transfer_order_package&amp;show_new=false</url>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="DELETE" query="documentkey=672b7c4cdb7fe450f24c5e25ca9619f8"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</application>
+        <file_path/>
+        <instance_id>6d7935fadbd99f44b2e05d00cf961994</instance_id>
+        <instance_name>ven02473</instance_name>
+        <name>sp_rectangle_menu_item_672b7c4cdb7fe450f24c5e25ca9619f8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item"><sp_rectangle_menu_item action="INSERT_OR_UPDATE"><active>true</active><color>default</color><condition>gs.hasRole('x_stave_sc.inventory_manager')||gs.hasRole('x_stave_sc.warehouse')</condition><display_1/><display_2/><display_date/><filter/><glyph>dropbox</glyph><hint/><kb_article/><kb_category/><kb_topic/><label>Packages</label><order>250</order><record_script/><sc_cat_item/><sc_category/><short_description/><sp_page/><sp_rectangle_menu display_value="Inventory Management">4fcae9e8dbf12010e2620181ca9619db</sp_rectangle_menu><sp_rectangle_menu_item/><sys_class_name>sp_rectangle_menu_item</sys_class_name><sys_created_by>paola.salcido</sys_created_by><sys_created_on>2021-04-23 17:34:47</sys_created_on><sys_id>672b7c4cdb7fe450f24c5e25ca9619f8</sys_id><sys_mod_count>5</sys_mod_count><sys_name>Packages</sys_name><sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package><sys_policy/><sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope><sys_update_name>sp_rectangle_menu_item_672b7c4cdb7fe450f24c5e25ca9619f8</sys_update_name><sys_updated_by>paola.salcido</sys_updated_by><sys_updated_on>2021-04-23 17:38:35</sys_updated_on><table/><type>url</type><url>?id=stv_ap_list&amp;table=x_stave_sc_transfer_order_package&amp;filter=&amp;o=sys_created_on&amp;d=desc&amp;target_page_id=stv_am_transfer_order_package&amp;show_new=false</url><url_target/></sp_rectangle_menu_item><sys_translated_text action="delete_multiple" query="documentkey=672b7c4cdb7fe450f24c5e25ca9619f8"/></record_update>]]></payload>
+        <payload_hash>1074909202</payload_hash>
+        <record_name>Packages</record_name>
+        <reverted_from/>
+        <source>744d98c3db4b6010f24c5e25ca96197c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-23 17:38:35</sys_created_on>
+        <sys_id>470c30ccdb7fe450f24c5e25ca96193f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178ffcfdb4b0000001</sys_recorded_at>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-23 17:38:35</sys_updated_on>
+        <type>Menu Item</type>
+        <update_guid>cb0c30cce47fe450377145e40d59913e</update_guid>
+        <update_guid_history>cb0c30cce47fe450377145e40d59913e:1074909202,55abf08cb47fe450ba1ec7923c4535af:-1531270653,0f9bf88c477fe45003bb9f76ac353b0b:-636598202,6c8bb48c237fe450d685d49c5ee537b2:1665498411,a23bbc4c127fe450ebf923d15b918337:1191048465,272b748c847fe450fa53f21ef1cce4e5:-1223870863</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Packages">35a83fe1db732c50f24c5e25ca96197d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>paola.salcido</sys_created_by>
+        <sys_created_on>2021-04-28 23:13:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_rectangle_menu_item">sp_rectangle_menu_item</sys_db_object>
+        <sys_id>adb0a27a9b804bb09ee6da870257d100</sys_id>
+        <sys_metadata>672b7c4cdb7fe450f24c5e25ca9619f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Packages</sys_name>
+        <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
+        <sys_scope_delete display_value="">00a6ad4346cd431980274a62ff92a419</sys_scope_delete>
+        <sys_update_name>sp_rectangle_menu_item_672b7c4cdb7fe450f24c5e25ca9619f8</sys_update_name>
+        <sys_update_version display_value="sp_rectangle_menu_item_672b7c4cdb7fe450f24c5e25ca9619f8">470c30ccdb7fe450f24c5e25ca96193f</sys_update_version>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-28 23:13:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

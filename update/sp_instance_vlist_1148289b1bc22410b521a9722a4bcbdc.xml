@@ -4,8 +4,8 @@
         <class_name/>
         <color>default</color>
         <css/>
-        <display_field/>
-        <field_list>number,stage,transfer_order,request_line,model,asset,quantity_requested,quantity_remaining,quantity_received,quantity_returned</field_list>
+        <display_field>asset</display_field>
+        <field_list>number,status,transfer_order,request_line,model,asset,quantity_requested,quantity_remaining,quantity_received,quantity_returned,stage</field_list>
         <filter/>
         <glyph/>
         <id/>
@@ -16,36 +16,36 @@
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">1148289b1bc22410b521a9722a4bcbda</sp_column>
+        <sp_column display_value="1">60a377a1db3b209094ea6693ca9619d7</sp_column>
         <sp_page/>
         <sp_widget display_value="Stave Form">e9146a9ddbd2b34094ea6693ca961905</sp_widget>
         <sys_class_name>sp_instance_vlist</sys_class_name>
         <sys_created_by>ilse.hernandez</sys_created_by>
         <sys_created_on>2021-02-05 18:42:32</sys_created_on>
         <sys_id>1148289b1bc22410b521a9722a4bcbdc</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Summary</sys_name>
         <sys_package display_value="Stave Asset Manager" source="x_stave_am">53f715ecdbf568d0f24c5e25ca9619b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="Stave Asset Manager">53f715ecdbf568d0f24c5e25ca9619b7</sys_scope>
         <sys_update_name>sp_instance_vlist_1148289b1bc22410b521a9722a4bcbdc</sys_update_name>
-        <sys_updated_by>ilse.hernandez</sys_updated_by>
-        <sys_updated_on>2021-02-05 18:42:32</sys_updated_on>
+        <sys_updated_by>paola.salcido</sys_updated_by>
+        <sys_updated_on>2021-04-29 15:48:22</sys_updated_on>
         <table>x_stave_sc_transfer_order_line</table>
         <title>Summary</title>
         <url/>
         <widget_parameters><![CDATA[{
 	"field_list": {
-		"value": "number,stage,transfer_order,request_line,model,asset,quantity_requested,quantity_remaining,quantity_received,quantity_returned",
-		"displayValue": "number,stage,transfer_order,request_line,model,asset,quantity_requested,quantity_remaining,quantity_received,quantity_returned"
+		"value": "number,status,transfer_order,request_line,model,asset,quantity_requested,quantity_remaining,quantity_received,quantity_returned,stage",
+		"displayValue": "number,status,transfer_order,request_line,model,asset,quantity_requested,stage,quantity_remaining,quantity_received,quantity_returned"
 	},
 	"title": {
 		"value": "Summary",
 		"displayValue": "Summary"
 	},
 	"header_field": {
-		"value": "request_state",
-		"displayValue": "request_state"
+		"value": "status",
+		"displayValue": "status"
 	},
 	"image": {
 		"value": "",
@@ -72,24 +72,32 @@
 		"displayValue": "false"
 	},
 	"help_text": {
-		"value": "",
-		"displayValue": ""
+		"value": "true",
+		"displayValue": "true"
 	},
 	"help_text_view": {
-		"value": "",
-		"displayValue": ""
+		"value": "help_text",
+		"displayValue": "help_text"
 	},
 	"clickable_referenced_fields": {
-		"value": "",
-		"displayValue": ""
+		"value": "transfer_order,asset,request_line",
+		"displayValue": "transfer_order,asset,request_line"
 	},
 	"service_portal_urls_table": {
-		"value": "",
-		"displayValue": ""
+		"value": "3edf524edb41dc1094ea6693ca9619d1",
+		"displayValue": "Service Portal URL"
 	},
 	"translated_html": {
 		"value": "",
 		"displayValue": ""
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"run_scripts": {
+		"value": "false",
+		"displayValue": "false"
 	}
 }]]></widget_parameters>
     </sp_instance_vlist>

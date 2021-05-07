@@ -11,7 +11,7 @@
         <short_description/>
         <size>md</size>
         <sp_column display_value="1">b6db49931b66a49067a4a8e82d4bcba0</sp_column>
-        <sp_widget display_value="Load Disabler">3153c240dbcbec500e9c71f2399619d8</sp_widget>
+        <sp_widget display_value="Stave Load Disabler">3153c240dbcbec500e9c71f2399619d8</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>jennifer.treviño</sys_created_by>
         <sys_created_on>2021-03-17 16:30:52</sys_created_on>

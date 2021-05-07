@@ -18,7 +18,7 @@
         <size>md</size>
         <sp_column display_value="1">33a86968dbf12010e2620181ca961994</sp_column>
         <sp_page display_value="kb_article">dea5792147132100ba13a5554ee4902d</sp_page>
-        <sp_widget display_value="Form Simple List">5bc8ba84db57b70094ea6693ca96199d</sp_widget>
+        <sp_widget display_value="Stave Form Simple List">5bc8ba84db57b70094ea6693ca96199d</sp_widget>
         <sys_class_name>sp_instance_vlist</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-01-16 00:04:58</sys_created_on>
